@@ -1,0 +1,18 @@
+.search-bar {
+  border-radius: 4px;
+  width: 40vw;
+  height: 5vh;
+}
+
+.button-search {
+  border-radius: 4px;
+  border-color: rgb(75, 75, 75);
+  border-width: 1px;
+  color: rgb(75, 75, 75);
+}
+
+.button-search:hover {
+  background-color: rgb(75, 75, 75);
+  color: white;
+  transition: background .2s linear
+}
