@@ -4,4 +4,8 @@ class ChefsController < ApplicationController
     @users = User.all
     @bookings = Booking.all
   end
+
+  def show
+    @chef = Chef.find(params[:id])
+  end
 end

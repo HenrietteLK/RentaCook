@@ -8,8 +8,8 @@ User.destroy_all
 p "db created "
 
 user1 = User.create(
-  first_name: "John",
-  last_name: "Doe",
+  first_name: "Ugo",
+  last_name: "Bast",
   address: "123 Maple Street, Springfield, IL 62704, USA",
   phone_number: "06-41-82-21-85",
   email: "john.doe@example.com",
