@@ -1,0 +1,61 @@
+
+<div class="d-flex flex-column justify-content-center align-items-center mt-5">
+
+    <div class="card mb-4 max-width-900 border-8">
+      <div class="card-header">
+        <h1 class="card-title"><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <% if @chef.user.profile_picture.present? %>
+            <div class="col-md-4">
+              <img src="<%= @chef.user.profile_picture %>" alt="<%= @chef.user.first_name %>'s profile picture" class="image-size img-fluid rounded-circle">
+            </div>
+          <% end %>
+
+          <div class="col-md-8">
+            <p><strong>Email:</strong> <%= @chef.user.email %></p>
+            <p><strong>Phone Number:</strong> <%= @chef.user.phone_number %></p>
+            <p><strong>Address:</strong> <%= @chef.user.address %></p>
+            <p><strong>Specialties:</strong> <%= @chef.specialties %></p>
+            <p><strong>Availability:</strong> <%= @chef.availability %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-4 max-width-900 border-8">
+      <div class="card-header">
+        <h2 class="card-title">Bookings</h2>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <% @chef.bookings.each do |booking| %>
+            <li class="list-group-item">
+              <strong>Start Date:</strong> <%= booking.start_date %>,
+              <strong>End Date:</strong> <%= booking.end_date %>,
+              <strong>Specialty:</strong> <%= booking.specialties %>,
+              <strong>Status:</strong> <%= booking.status %>
+              <p><strong>Message:</strong> <%= booking.message %></p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mb-5 max-width-900 border-8">
+      <div class="card-header">
+        <h2 class="card-title">Reviews</h2>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <% @chef.reviews.each do |review| %>
+            <li class="list-group-item">
+              <strong>Rating:</strong> <%= review.rating %>/5
+              <p><strong>Comment:</strong> <%= review.comment %></p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+</div>

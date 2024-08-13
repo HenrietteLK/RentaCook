@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :user
-  belongs_to :chef
+  has_one :chef, through: :booking
   belongs_to :booking
 
   validates :rating, presence: true
