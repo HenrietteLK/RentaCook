@@ -1,28 +1,26 @@
 <div class="container">
-</div>
-<div class="container d-flex justify-content-center mt-5">
-   <form class="search-bar d-flex justify-content-center">
-        <input class="form-control me-2" type="search" placeholder="Rechercher">
-        <button class="button-search" type="submit">Rechercher</button>
-    </form>
+  <div class="title-chef">
+    <h1>Choose a chef</h1>
+  </div>
 </div>
 
 <div class="container mt-5">
   <div class="row d-flex">
     <% @chefs.each do |chef| %>
     <div class="col-md-3 mb-4">
-      <div class="card card-item d-flex align-item-center justify-content-between flex-column">
-          <div class="profile-picture">
-            <%= image_tag(url_for(chef.user.profile_picture)) %>
-          </div>
-          <div class="chefs-texts">
-            <h4> <%= chef.user.first_name %> <%= chef.user.last_name %></h4>
-            <p class="specialties text-primary">
-              <%= JSON.parse(chef.specialties).join(', ') %>
-            </p>
-          </div>
-      </div>
+      <%= link_to chef_path(chef), class: "card card-item d-flex align-item-center justify-content-between flex-column" do %>
+        <div class="profile-picture">
+          <%= image_tag(url_for(chef.user.profile_picture)) %>
+        </div>
+        <div class="chefs-texts">
+          <h4><%= chef.user.first_name %> <%= chef.user.last_name %></h4>
+          <p class="specialties">
+            <%= JSON.parse(chef.specialties).join(', ') %>
+          </p>
+        </div>
+      <% end %>
     </div>
     <% end %>
   </div>
 </div>
+
