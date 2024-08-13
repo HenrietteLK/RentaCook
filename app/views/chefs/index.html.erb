@@ -8,18 +8,21 @@
 </div>
 
 <div class="container mt-5">
-  <div class="row">
-    <div class="d-flex col-3 justify-content-center">
-      <div class="test">Test 1</div>
+  <div class="row d-flex">
+    <% @chefs.each do |chef| %>
+    <div class="col-md-3 mb-4">
+      <div class="card card-item d-flex align-item-center justify-content-between flex-column">
+          <div class="profile-picture">
+            <%= image_tag(url_for(chef.user.profile_picture)) %>
+          </div>
+          <div class="chefs-texts">
+            <h4> <%= chef.user.first_name %> <%= chef.user.last_name %></h4>
+            <p class="specialties text-primary">
+              <%= JSON.parse(chef.specialties).join(', ') %>
+            </p>
+          </div>
+      </div>
     </div>
-    <div class="d-flex col-3 justify-content-center">
-      <div class="test">Test 2</div>
-    </div>
-    <div class="d-flex col-3 justify-content-center">
-      <div class="test">Test 3</div>
-    </div>
-    <div class="d-flex col-3 justify-content-center">
-      <div class="test">Test 4</div>
-    </div>
+    <% end %>
   </div>
 </div>
