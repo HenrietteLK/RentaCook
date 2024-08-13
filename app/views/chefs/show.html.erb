@@ -3,7 +3,7 @@
 
     <div class="card mb-4 max-width-900 border-8">
       <div class="card-header">
-        <h1 class="card-title"><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
+        <h1 class="card-title text-success"><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
       </div>
       <div class="card-body">
         <div class="row">
@@ -26,12 +26,12 @@
 
     <div class="card mb-4 max-width-900 border-8">
       <div class="card-header">
-        <h2 class="card-title">Bookings</h2>
+        <h2 class="card-title text-success">Bookings</h2>
       </div>
       <div class="card-body">
         <ul class="list-group">
           <% @chef.bookings.each do |booking| %>
-            <li class="list-group-item">
+            <li class="list-group-item border-8 rounded">
               <strong>Start Date:</strong> <%= booking.start_date %>,
               <strong>End Date:</strong> <%= booking.end_date %>,
               <strong>Specialty:</strong> <%= booking.specialties %>,
@@ -45,12 +45,12 @@
 
     <div class="card mb-4 max-width-900 border-8">
       <div class="card-header">
-        <h2 class="card-title">Reviews</h2>
+        <h2 class="card-title text-success">Reviews</h2>
       </div>
       <div class="card-body">
         <ul class="list-group">
           <% @chef.reviews.each do |review| %>
-            <li class="list-group-item">
+            <li class="list-group-item border-8 rounded">
               <strong>Rating:</strong> <%= review.rating %>/5
               <p><strong>Comment:</strong> <%= review.comment %></p>
             </li>
