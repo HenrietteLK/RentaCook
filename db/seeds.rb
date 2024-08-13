@@ -50,7 +50,7 @@ user5 = User.create(
   phone_number: "06-41-82-21-85",
   email: "david.wilson@example.com",
   password: "password123",
-  profile_picture: "https://media.istockphoto.com/id/2157069693/fr/photo/homme-souriant-avec-des-lunettes-assis-dans-un-salon-moderne-avec-fond-d%C3%A9tag%C3%A8re.jpg?s=612x612&w=0&k=20&c=jcOQf8tHTaH4rlMW9_7vwC3rYQr2eTp3wElaqN14H_M="
+  profile_picture: "https://images.pexels.com/photos/927505/pexels-photo-927505.jpeg"
 )
 User.create(
   first_name: "Sophia",
