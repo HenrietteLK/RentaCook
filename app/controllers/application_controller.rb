@@ -9,4 +9,12 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :address, :email, :phone_number])
   end
+
+  def after_sign_in_path
+    chefs_path
+  end
+
+  def after_sign_up_path
+    chefs_path
+  end
 end
