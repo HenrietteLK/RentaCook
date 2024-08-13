@@ -192,7 +192,7 @@ p User.all
 
 chef1 = Chef.create(
   user_id: user1.id,
-  specialties: ["British Cuisine", "Frence Cuisine"],
+  specialties: ["British Cuisine", "French Cuisine"],
   availability: "2024-09-01"
 )
 chef3 = Chef.create(
