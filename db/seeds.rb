@@ -193,35 +193,41 @@ p User.all
 chef1 = Chef.create(
   user_id: user1.id,
   specialties: ["British Cuisine", "French Cuisine"],
-  availability: "2024-09-01"
+  availability: "2024-09-01",
+  price_per_day: 200
 )
 chef3 = Chef.create(
   user_id: user3.id,
   specialties: ["Italian Cuisine"],
-  availability: "2024-09-15"
+  availability: "2024-09-15",
+  price_per_day: 40
 )
 chef4 = Chef.create(
   user_id: user4.id,
   specialties: ["French Cuisine", "Spanish Cuisine"],
-  availability: "2024-10-01"
+  availability: "2024-10-01",
+  price_per_day: 12
+
 )
 chef2 = Chef.create(
   user_id: user2.id,
   specialties: ["Chinese Cuisine", "Japanese Cuisine"],
-  availability: "2024-10-15"
+  availability: "2024-10-15",
+  price_per_day: 50
 )
 
 chef5 = Chef.create(
   user_id: user5.id,
   specialties: ["Thailand Cuisine"],
-  availability: "2024-10-15"
+  availability: "2024-10-15",
+  price_per_day: 35
 )
 
 booking1 = Booking.create(
   start_date: "2024-07-10",
   end_date: "2024-07-12",
-  price: 350,
-  specialties: "British Cuisine",
+  total_price: 350,
+  specialty: "British Cuisine",
   message: "Amazing experience! The Beef Wellington was cooked to perfection.",
   status: "Pending",
   user_id: user1.id,
@@ -230,8 +236,8 @@ booking1 = Booking.create(
 booking2 = Booking.create(
   start_date: "2024-08-01",
   end_date: "2024-08-03",
-  price: 250,
-  specialties: "Italian Cuisine",
+  total_price: 250,
+  specialty: "Italian Cuisine",
   message: "Delicious pasta and great atmosphere. Highly recommend!",
   status: "Pending",
   user_id: user3.id,
@@ -240,8 +246,8 @@ booking2 = Booking.create(
 booking3 = Booking.create(
   start_date: "2024-09-15",
   end_date: "2024-09-17",
-  price: 500,
-  specialties: "French Cuisine",
+  total_price: 500,
+  specialty: "French Cuisine",
   message: "An exquisite dining experience with foie gras and truffles.",
   status: "Pending",
   user_id: user1.id,
@@ -250,8 +256,8 @@ booking3 = Booking.create(
 booking4 = Booking.create(
   start_date: "2024-10-01",
   end_date: "2024-10-02",
-  price: 300,
-  specialties: "Japanese Cuisine",
+  total_price: 300,
+  specialty: "Japanese Cuisine",
   message: "Fresh, local ingredients made for a delightful meal.",
   status: "Completed",
   user_id: user2.id,
@@ -260,8 +266,8 @@ booking4 = Booking.create(
 booking5 = Booking.create(
   start_date: "2024-07-20",
   end_date: "2024-07-22",
-  price: 400,
-  specialties: "British Cuisine",
+  total_price: 400,
+  specialty: "British Cuisine",
   message: "The scallops were out of this world! Worth every penny.",
   status: "Completed",
   user_id: user2.id,
@@ -270,8 +276,8 @@ booking5 = Booking.create(
 booking6 = Booking.create(
   start_date: "2024-08-15",
   end_date: "2024-08-17",
-  price: 200,
-  specialties: "Italian Cuisine",
+  total_price: 200,
+  specialty: "Italian Cuisine",
   message: "Loved the burgers! A perfect casual dining experience.",
   status: "Completed",
   user_id: user3.id,
@@ -280,8 +286,8 @@ booking6 = Booking.create(
 booking7 = Booking.create(
   start_date: "2024-09-20",
   end_date: "2024-09-21",
-  price: 550,
-  specialties: "French Cuisine",
+  total_price: 550,
+  specialty: "French Cuisine",
   message: "Luxury dining at its finest. The truffle dishes were incredible.",
   status: "Completed",
   user_id: user3.id,
@@ -290,8 +296,8 @@ booking7 = Booking.create(
 booking8 = Booking.create(
   start_date: "2024-10-05",
   end_date: "2024-10-07",
-  price: 320,
-  specialties: "Japanese Cuisine",
+  total_price: 320,
+  specialty: "Japanese Cuisine",
   message: "A fresh take on classic dishes. Loved the farm-to-table concept.",
   status: "Upcoming",
   user_id: user4.id,
@@ -300,8 +306,8 @@ booking8 = Booking.create(
 booking9 = Booking.create(
   start_date: "2024-11-01",
   end_date: "2024-11-03",
-  price: 450,
-  specialties: "British Cuisine",
+  total_price: 450,
+  specialty: "British Cuisine",
   message: "Exceptional service and fantastic food. The Beef Wellington was divine.",
   status: "Upcoming",
   user_id: user4.id,
@@ -310,8 +316,8 @@ booking9 = Booking.create(
 booking10 = Booking.create(
   start_date: "2024-11-10",
   end_date: "2024-11-12",
-  price: 230,
-  specialties: "Italian Cuisine",
+  total_price: 230,
+  specialty: "Italian Cuisine",
   message: "Looking forward to another great meal. The pasta dishes are always a hit.",
   status: "Upcoming",
   user_id: user5.id,

@@ -5,4 +5,5 @@ class Chef < ApplicationRecord
 
   validates :specialties, presence: true
   validates :availability, presence: true
+  validates :price_per_day, presence: true
 end
