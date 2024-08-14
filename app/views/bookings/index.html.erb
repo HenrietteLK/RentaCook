@@ -1,0 +1,20 @@
+<div class="d-flex pt-3" style="justify-content: center; width: 100vw">
+  <div class="card mb-4 max-width-900 border-8">
+      <div class="card-header">
+        <h2 class="card-title text-success">Bookings</h2>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <% @user_bookings.each do |booking| %>
+            <li class="list-group-item border-8 rounded">
+              <strong>Start Date:</strong> <%= booking.start_date %>,
+              <strong>End Date:</strong> <%= booking.end_date %>,
+              <strong>Specialty:</strong> <%= booking.specialty %>,
+              <strong>Status:</strong> <%= booking.status %>
+              <p><strong>Message:</strong> <%= booking.message %></p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+</div>
