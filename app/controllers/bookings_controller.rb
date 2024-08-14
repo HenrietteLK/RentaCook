@@ -12,6 +12,10 @@ class BookingsController < ApplicationController
     @user = @booking.user
   end
 
+  def index
+    @user_bookings = current_user.bookings
+  end
+
   private
 
   def booking_params
