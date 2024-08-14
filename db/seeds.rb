@@ -223,6 +223,8 @@ chef5 = Chef.create(
   price_per_day: 35
 )
 
+p Chef.all
+
 booking1 = Booking.create(
   start_date: "2024-07-10",
   end_date: "2024-07-12",
@@ -324,6 +326,8 @@ booking10 = Booking.create(
   chef_id: chef5.id
 )
 
+p Booking.all
+
 Review.create(
   rating: 4.8,
   comment: "Incredible experience! The attention to detail in every dish was amazing.",
@@ -394,5 +398,7 @@ Review.create(
   chef_id: chef5.id,
   booking_id: booking10.id
 )
+
+p Review.all
 
 p "db successful created"
