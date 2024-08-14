@@ -2,8 +2,11 @@
 <div class="d-flex flex-column justify-content-center align-items-center mt-5">
 
     <div class="card mb-4 max-width-900 border-8">
-      <div class="card-header">
+      <div class="card-header d-flex justify-content-between align-items-center">
         <h1 class="card-title text-success"><%= @chef.user.first_name %> <%= @chef.user.last_name %></h1>
+        <button type="button" class="mb-3 ms-auto rounded-pill" data-bs-toggle="modal" data-bs-target="#bookingModal">
+        Book this Chef
+        </button>
       </div>
       <div class="card-body">
         <div class="row">
@@ -19,7 +22,7 @@
             <p><strong>Address:</strong> <%= @chef.user.address %></p>
             <p><strong>Specialties:</strong> <%= @chef.specialties %></p>
             <p><strong>Availability:</strong> <%= @chef.availability %></p>
-            <p><strong>Price:</strong> <%= @chef.price_per_day %></p>
+            <p><strong>Price:</strong> <%= @chef.price_per_day %> € / day</p>
           </div>
         </div>
       </div>
@@ -41,11 +44,6 @@
       </div>
     </div>
 
-
-  <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
-    Book this Chef
-  </button>
-
   <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -54,20 +52,20 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <%= simple_form_for([@chef, @booking], html: { class: 'mt-3' }) do |f| %>
+          <%= simple_form_for([@chef, @booking], html: { data: { controller: 'flatpickr' },class: 'mt-3' }) do |f| %>
             <div class="mb-3">
-              <%= f.input :specialty, collection: JSON.parse(@chef.specialties), label: "Choose Specialty", prompt: "Select a specialty", input_html: { id: 'specialty_select' } %>
+              <%= f.input :specialty, collection: JSON.parse(@chef.specialties), label: false, prompt: "Select a specialty", input_html: { id: 'specialty_select' } %>
             </div>
             <div class="mb-3">
-              <%= f.input :start_date, as: :string, label: "Start Date", input_html: { type: 'date' } %>
+              <%= f.input :start_date, as: :string, label: "Start Date", input_html: { data: { flatpickr_target: 'startDateInput' } } %>
             </div>
             <div class="mb-3">
-              <%= f.input :end_date, as: :string, label: "End Date", input_html: { type: 'date' } %>
+              <%= f.input :end_date, as: :string, label: "End Date", input_html: { data: { flatpickr_target: 'endDateInput' } } %>
             </div>
             <div class="mb-3">
-              <%= f.input :message, label: "Message", as: :text, input_html: { rows: 4 } %>
+              <%= f.input :message, as: :text, input_html: { rows: 4 }, label: false, placeholder: "Write a message to #{@chef.user.first_name}" %>
             </div>
-            <%= f.button :submit, 'Submit Booking', class: 'btn btn-primary' %>
+            <%= f.button :submit, 'Reserve', class: 'btn btn-primary' %>
           <% end %>
         </div>
       </div>
