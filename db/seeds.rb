@@ -10,7 +10,7 @@ p "db created "
 user1 = User.create(
   first_name: "Ugo",
   last_name: "Bast",
-  address: "123 Maple Street, Springfield, IL 62704, USA",
+  address: "15 Rue d'Alésia, 75014 Paris",
   phone_number: "06-41-82-21-85",
   email: "john.doe@example.com",
   password: "password123",
@@ -19,7 +19,7 @@ user1 = User.create(
 user2 = User.create(
   first_name: "Jane",
   last_name: "Smith",
-  address: "456 Oak Avenue, Columbus, OH 43016, USA",
+  address: "108 Rue de la Tombe Issoire, 75014 Paris",
   phone_number: "06-41-82-21-85",
   email: "jane.smith@example.com",
   password: "password123",
@@ -28,7 +28,7 @@ user2 = User.create(
 user3 = User.create(
   first_name: "Michael",
   last_name: "Johnson",
-  address: "789 Pine Road, Madison, WI 53703, USA",
+  address: "74 Avenue du Général Leclerc, 75014 Paris",
   phone_number: "06-41-82-21-85",
   email: "michael.johnson@example.com",
   password: "password123",
@@ -37,7 +37,7 @@ user3 = User.create(
 user4 = User.create(
   first_name: "Emily",
   last_name: "Davis",
-  address: "321 Birch Boulevard, Raleigh, NC 27601, USA",
+  address: "197 Rue de Rivoli, 75001 Paris",
   phone_number: "06-41-82-21-85",
   email: "emily.davis@example.com",
   password: "password123",
@@ -46,7 +46,7 @@ user4 = User.create(
 user5 = User.create(
   first_name: "David",
   last_name: "Wilson",
-  address: "654 Cedar Lane, Denver, CO 80203, USA",
+  address: "25 Avenue Pierre Brossolette, 92120 Montrouge",
   phone_number: "06-41-82-21-85",
   email: "david.wilson@example.com",
   password: "password123",
