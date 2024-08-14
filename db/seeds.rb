@@ -52,7 +52,7 @@ user5 = User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/927505/pexels-photo-927505.jpeg"
 )
-User.create(
+user6 = User.create(
   first_name: "Sophia",
   last_name: "Martinez",
   address: "987 Elm Street, Austin, TX 73301, USA",
@@ -61,7 +61,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user7 = User.create(
   first_name: "James",
   last_name: "Anderson",
   address: "159 Willow Way, Portland, OR 97201, USA",
@@ -70,7 +70,7 @@ User.create(
   password: "password123",
   profile_picture: "https://media.istockphoto.com/id/1134227880/fr/photo/homme-bel-portant-des-lunettes-et-souriant-d%C3%A9tendu-%C3%A0-lappareil-photo.jpg?s=612x612&w=0&k=20&c=0ioSuRPd5qOqFJG1uW8Vm7atAz-v_KEYo547_1Ki1Cc="
 )
-User.create(
+user8 = User.create(
   first_name: "Olivia",
   last_name: "Thomas",
   address: "753 Cypress Court, San Francisco, CA 94102, USA",
@@ -79,7 +79,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/5682847/pexels-photo-5682847.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user9 = User.create(
   first_name: "William",
   last_name: "Garcia",
   address: "258 Redwood Drive, Seattle, WA 98101, USA",
@@ -88,7 +88,7 @@ User.create(
   password: "password123",
   profile_picture: "https://media.istockphoto.com/id/1319095687/fr/photo/homme-confiant-de-sourire-de-portrait-de-projectile-de-t%C3%AAte-regardant-lappareil-photo.jpg?s=612x612&w=0&k=20&c=Cl7N3arLPnjxh-01QTdY7uhL4oNupLrqSF6I2J83oMM="
 )
-User.create(
+user10 = User.create(
   first_name: "Mia",
   last_name: "Robinson",
   address: "846 Oakwood Lane, Miami, FL 33101, USA",
@@ -97,7 +97,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/8129903/pexels-photo-8129903.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user11 = User.create(
   first_name: "Alexander",
   last_name: "Lewis",
   address: "324 Aspen Street, Boston, MA 02108, USA",
@@ -106,7 +106,7 @@ User.create(
   password: "password123",
   profile_picture: "https://media.istockphoto.com/id/1329501064/fr/photo/portrait-dun-homme-d%C3%A2ge-moyen-souriant-%C3%A0-la-cam%C3%A9ra.jpg?s=612x612&w=0&k=20&c=DCB0mstz0VA2TEe8f_NRAzdapl8wT0RbUvukNJqaQIs="
 )
-User.create(
+user12 = User.create(
   first_name: "Charlotte",
   last_name: "Walker",
   address: "672 Maplewood Drive, Atlanta, GA 30303, USA",
@@ -115,7 +115,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/8420889/pexels-photo-8420889.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user13 = User.create(
   first_name: "Daniel",
   last_name: "Hall",
   address: "135 Lakeview Road, Chicago, IL 60601, USA",
@@ -124,7 +124,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/6274712/pexels-photo-6274712.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user14 = User.create(
   first_name: "Amelia",
   last_name: "Harris",
   address: "489 Magnolia Street, Houston, TX 77002, USA",
@@ -133,7 +133,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/4946515/pexels-photo-4946515.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user15 = User.create(
   first_name: "Benjamin",
   last_name: "Young",
   address: "743 Walnut Avenue, Los Angeles, CA 90001, USA",
@@ -142,7 +142,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user16 = User.create(
   first_name: "Ava",
   last_name: "King",
   address: "912 Dogwood Lane, Dallas, TX 75201, USA",
@@ -151,7 +151,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/4420634/pexels-photo-4420634.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user17 = User.create(
   first_name: "Joseph",
   last_name: "Wright",
   address: "102 Oakridge Court, Philadelphia, PA 19102, USA",
@@ -160,7 +160,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/5378700/pexels-photo-5378700.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user18 = User.create(
   first_name: "Isabella",
   last_name: "Lopez",
   address: "567 Highland Road, Phoenix, AZ 85001, USA",
@@ -169,7 +169,7 @@ User.create(
   password: "password123",
   profile_picture: "https://images.pexels.com/photos/5615665/pexels-photo-5615665.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
-User.create(
+user19 = User.create(
   first_name: "Matthew",
   last_name: "Scott",
   address: "348 River Street, San Antonio, TX 78201, USA",
@@ -225,6 +225,119 @@ chef5 = Chef.create(
   address: user5.address,
   price_per_day: 35
 )
+
+Chef.create(
+  user_id: user6.id,
+  specialties: ["Spanish Cuisine", "Turkish Cuisine"],
+  availability: "2024-10-15",
+  address: user6.address,
+  price_per_day: 20
+)
+
+Chef.create(
+  user_id: user7.id,
+  specialties: ["Japanese Cuisine"],
+  availability: "2024-10-15",
+  address: user7.address,
+  price_per_day: 70
+)
+
+Chef.create(
+  user_id: user8.id,
+  specialties: ["British Cuisine", "Belgian Cuisine"],
+  availability: "2024-10-15",
+  address: user8.address,
+  price_per_day: 20
+)
+
+Chef.create(
+  user_id: user9.id,
+  specialties: ["Kurdish Cuisine", "Turkish Cuisine"],
+  availability: "2024-10-15",
+  address: user9.address,
+  price_per_day: 50
+)
+
+Chef.create(
+  user_id: user10.id,
+  specialties: ["American Cuisine", "French Cuisine", "Canadian Cuisine"],
+  availability: "2024-10-15",
+  address: user10.address,
+  price_per_day: 45
+)
+
+Chef.create(
+  user_id: user11.id,
+  specialties: ["Chinese Cuisine", "Vietnamese Cuisine"],
+  availability: "2024-10-15",
+  address: user11.address,
+  price_per_day: 10
+)
+
+Chef.create(
+  user_id: user12.id,
+  specialties: ["Arab Cuisine", "Turkish Cuisine"],
+  availability: "2024-10-15",
+  address: user12.address,
+  price_per_day: 40
+)
+
+Chef.create(
+  user_id: user13.id,
+  specialties: ["French Cuisine", "Italian Cuisine"],
+  availability: "2024-10-15",
+  address: user13.address,
+  price_per_day: 150
+)
+
+Chef.create(
+  user_id: user14.id,
+  specialties: ["Polish Cuisine", "German Cuisine"],
+  availability: "2024-10-15",
+  address: user14.address,
+  price_per_day: 5
+)
+
+Chef.create(
+  user_id: user15.id,
+  specialties: ["Chinese Cuisine"],
+  availability: "2024-10-15",
+  address: user15.address,
+  price_per_day: 15
+)
+
+Chef.create(
+  user_id: user16.id,
+  specialties: ["Korean Cuisine", "Japanese Cuisine"],
+  availability: "2024-10-15",
+  address: user16.address,
+  price_per_day: 80
+)
+
+Chef.create(
+  user_id: user17.id,
+  specialties: ["Spanish Cuisine", "Italian Cuisine"],
+  availability: "2024-10-15",
+  address: user17.address,
+  price_per_day: 20
+)
+
+Chef.create(
+  user_id: user18.id,
+  specialties: ["French Cuisine", "Italian Cuisine"],
+  availability: "2024-10-15",
+  address: user18.address,
+  price_per_day: 50
+)
+
+Chef.create(
+  user_id: user19.id,
+  specialties: ["American Cuisine"],
+  availability: "2024-10-15",
+  address: user19.address,
+  price_per_day: 35
+)
+
 p Chef.all
 
 booking1 = Booking.create(
