@@ -2,13 +2,15 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.chef = Chef.find(params[:id])
-    @booking.price = 20
+    @booking.chef = Chef.find(params[:chef_id])
+    @booking.total_price = 20
     # @booking.specialty = current_user
     # faire le calcul pour le price une fois la demo terminee
-    @booking.save!
-
-    redirect_to booking_path(@booking)
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      render "chefs/show", status: :unprocessable
+    end
   end
 
   def index
@@ -20,7 +22,7 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     @chefs = Chef.all
-    @user = @booking.user
+    @chef = @booking.chef
   end
 
   private

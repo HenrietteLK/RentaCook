@@ -54,9 +54,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <%= simple_form_for([@chef, Booking.new], html: { class: 'mt-3' }) do |f| %>
+          <%= simple_form_for([@chef, @booking], html: { class: 'mt-3' }) do |f| %>
             <div class="mb-3">
-              <%= f.input :specialty, as: :select, label: "Choose Specialty", prompt: "Select a specialty", input_html: { id: 'specialty_select' } %>
+              <%= f.input :specialty, collection: JSON.parse(@chef.specialties), label: "Choose Specialty", prompt: "Select a specialty", input_html: { id: 'specialty_select' } %>
             </div>
             <div class="mb-3">
               <%= f.input :start_date, as: :string, label: "Start Date", input_html: { type: 'date' } %>
@@ -66,14 +66,6 @@
             </div>
             <div class="mb-3">
               <%= f.input :message, label: "Message", as: :text, input_html: { rows: 4 } %>
-            </div>
-            <div class="mb-3">
-              <label for="days_booked">Days Booked</label>
-              <input type="text" id="days_booked" class="form-control" readonly>
-            </div>
-            <div class="mb-3">
-              <label for="total_price">Total Price (in €)</label>
-              <input type="text" id="total_price" class="form-control" readonly>
             </div>
             <%= f.button :submit, 'Submit Booking', class: 'btn btn-primary' %>
           <% end %>
