@@ -2,7 +2,8 @@ class ChefsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @chefs = Chef.all
+    @cheffs = Chef.all
+
     @users = User.all
     @bookings = Booking.all
     @chefs = Chef.geocoded
