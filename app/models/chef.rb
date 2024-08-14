@@ -5,4 +5,7 @@ class Chef < ApplicationRecord
 
   validates :specialties, presence: true
   validates :availability, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end

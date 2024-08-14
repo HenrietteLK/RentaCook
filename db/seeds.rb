@@ -193,28 +193,33 @@ p User.all
 chef1 = Chef.create(
   user_id: user1.id,
   specialties: ["British Cuisine", "French Cuisine"],
-  availability: "2024-09-01"
+  availability: "2024-09-01",
+  address: user1.address
 )
 chef3 = Chef.create(
   user_id: user3.id,
   specialties: ["Italian Cuisine"],
-  availability: "2024-09-15"
+  availability: "2024-09-15",
+  address: user3.address
 )
 chef4 = Chef.create(
   user_id: user4.id,
   specialties: ["French Cuisine", "Spanish Cuisine"],
-  availability: "2024-10-01"
+  availability: "2024-10-01",
+  address: user4.address
 )
 chef2 = Chef.create(
   user_id: user2.id,
   specialties: ["Chinese Cuisine", "Japanese Cuisine"],
-  availability: "2024-10-15"
+  availability: "2024-10-15",
+  address: user2.address
 )
 
 chef5 = Chef.create(
   user_id: user5.id,
   specialties: ["Thailand Cuisine"],
-  availability: "2024-10-15"
+  availability: "2024-10-15",
+  address: user5.address
 )
 
 booking1 = Booking.create(
