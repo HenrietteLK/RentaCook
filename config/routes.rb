@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :chefs, only: [:index, :show] do
-    resources :bookings, only: [:create]
+    resources :bookings, only: [:create, :show]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

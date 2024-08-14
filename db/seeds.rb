@@ -321,7 +321,7 @@ booking10 = Booking.create(
   total_price: 230,
   specialty: "Italian Cuisine",
   message: "Looking forward to another great meal. The pasta dishes are always a hit.",
-  status: "Upcoming",
+  status: "Refused",
   user_id: user5.id,
   chef_id: chef5.id
 )
