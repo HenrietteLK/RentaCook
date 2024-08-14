@@ -6,6 +6,11 @@
 
 <div class="container mt-5">
   <div class="row d-flex">
+<div style="width: 600px; height: 400px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
     <% @cheffs.each do |chef| %>
     <div class="col-md-3 mb-4">
       <%= link_to chef_path(chef), class: "card card-item d-flex align-item-center justify-content-between flex-column" do %>
@@ -27,9 +32,4 @@
     </div>
     <% end %>
   </div>
-</div>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
