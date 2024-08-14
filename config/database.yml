@@ -82,3 +82,4 @@ production:
   database: rbnb_production
   username: rbnb
   password: <%= ENV["RBNB_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
