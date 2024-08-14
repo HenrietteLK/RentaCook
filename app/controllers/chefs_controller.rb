@@ -5,10 +5,13 @@ class ChefsController < ApplicationController
     @chefs = Chef.all
     @users = User.all
     @bookings = Booking.all
-    @markers = @chefs.geocoded.map do |chef|
+    @chefs = Chef.geocoded
+    @markers = @chefs.map do |chef|
       {
         lat: chef.latitude,
-        lng: chef.longitude
+        lng: chef.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { chef: chef }),
+        marker_html: render_to_string(partial: "marker")
       }
     end
   end
