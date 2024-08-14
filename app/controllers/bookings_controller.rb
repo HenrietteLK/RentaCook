@@ -1,9 +1,20 @@
 class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
-    @booking.save
+    @booking.user = current_user
+    @booking.chef = Chef.find(params[:id])
+    @booking.price = 20
+    # @booking.specialty = current_user
+    # faire le calcul pour le price une fois la demo terminee
+    @booking.save!
 
     redirect_to booking_path(@booking)
+  end
+
+  def index
+    @bookings = Booking.all
+    @chefs = Chef.all
+    @users = User.all
   end
 
   def show
