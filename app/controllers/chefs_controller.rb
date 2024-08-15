@@ -22,8 +22,26 @@ class ChefsController < ApplicationController
     @booking = Booking.new
   end
 
+  def new
+    @chef = Chef.new
+  end
+
   def create
-    Chef.address = User.address
-    chef.save
+    # Chef.address = User.address
+    # chef.save
+
+    @chef = Chef.new(chef_params)
+    @chef.user = current_user
+    @chef.specialties = params[:search][:specialties]
+    @chef.save!
+
+    redirect_to chef_path(@chef)
+  end
+
+
+  private
+
+  def chef_params
+    params.require(:chef).permit(:specialties, :availability, :price_per_day, :description)
   end
 end

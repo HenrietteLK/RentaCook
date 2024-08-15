@@ -1,0 +1,32 @@
+<h1 class="text-center m-4" id="title-chef-new">Propose your services as a chef!</h1>
+
+<div class="container">
+  <div class="row d-flex">
+    <div class="col-6 d-flex justify-content-center align-items-center">
+      <%= image_tag "https://images.pexels.com/photos/4253312/pexels-photo-4253312.jpeg", alt: "Chef-img", id: "img-chef-new" %>
+    </div>
+    <div class="col-6">
+      <%= simple_form_for @chef, url: chefs_path, method: :post do |f| %>
+        <div class="container d-flex flex-column">
+          <div class="d-flex justify-content-between">
+            <div class="price-per-day mb-3">
+              <%= f.input :price_per_day, label: "Set your price per day", placeholder: "0", input_html: { min: 0, step: 1 } %>
+            </div>
+            <div class="availability mb-3">
+              <%= f.input :availability, label: "Set your availability", placeholder: "'Only on weekdays' or 'During the summer'" %>
+            </div>
+          </div>
+          <div class="specialties mb-3">
+            <%= f.input :specialties, label: false, collection: ["French Cuisine", "Spanish Cuisine", "American Cuisine", "Italian Cuisine", "Chinese Cuisine", "Japanese Cuisine", "Korean Cuisine", "Mexican Cuisine", "Arab Cuisine", "Turkish Cuisine", "British Cuisine", "Indian Cuisine", "Thailand Cuisine", "German Cuisine"], include_blank: "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, :input_html => {:name => "search[specialties][]", :multiple => true}, include_hidden: false %>
+          </div>
+          <div class="description mb-3">
+            <%= f.input :description, label: false, placeholder: "Add a description" %>
+          </div>
+          <div class="d-flex justify-content-center align-items-center p-3">
+            <%= f.button :submit, "Become a chef!", class: 'btn btn-primary' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
