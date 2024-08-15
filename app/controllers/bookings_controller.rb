@@ -26,6 +26,11 @@ class BookingsController < ApplicationController
     @chef = @booking.chef
   end
 
+  def dashboard
+    # Assuming current_user is defined and associated with bookings
+    @user_bookings = current_user.bookings # Fetch bookings associated with the current user
+  end
+
   private
 
   def booking_params
