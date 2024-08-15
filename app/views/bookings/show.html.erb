@@ -1,7 +1,7 @@
 <div class="d-flex col-lg-12 justify-content-center text-center mt-5">
-  <div class="row" id="row-bookings">
+  <div class="row text-white" id="row-bookings">
     <% if @booking.status == "Pending" %>
-      <h1 class="text-success">Request Sent!</h1>
+      <h1>Request Sent!</h1>
       <h3>Please wait for the chef's confirmation</h3>
     <%elsif @booking.status == "Refused"%>
       <h1>Request refused</h1>
@@ -21,18 +21,18 @@
     <img src="<%= @chef.user.profile_picture %>" alt="Profile Picture" id="img-booking">
   </div>
 
-  <div class="container d-flex flex-column justify-content-center text-start" id="card-right">
+  <div class="container d-flex flex-column justify-content-center text-start text-white" id="card-right">
     <ul class="list p-4">
-      <li><h4>Chef : <%= @chef.user.first_name%> <%= @chef.user.last_name%></h4></li>
-      <li><h4>Specialty : <%= @booking.specialty%></h4></li>
-      <li><h4>Price : <%= @booking.total_price%>€ </h4></li>
-      <li><h4>Your message : <%= @booking.message%></h4></li>
-      <li><h4>Status : <%= @booking.status%></h4></li>
-      <li><h4>Dates : <%= @booking.start_date%> to <%= @booking.end_date%></h4></li>
+      <li><h4><strong>Chef :</strong> <%= @chef.user.first_name%> <%= @chef.user.last_name%></h4></li>
+      <li><h4><strong>Specialty :</strong> <%= @booking.specialty%></h4></li>
+      <li><h4><strong>Price :</strong> <%= @booking.total_price%>€ </h4></li>
+      <li><h4><strong>Your message :</strong> <%= @booking.message%></h4></li>
+      <li><h4><strong>Status :</strong> <%= @booking.status%></h4></li>
+      <li><h4><strong>Dates :</strong> <%= @booking.start_date%> to <%= @booking.end_date%></h4></li>
     </ul>
   </div>
 </div>
 
 <div class="mt-4 mb-4 d-flex justify-content-center">
-  <%= link_to 'Back to Chefs', chefs_path, class: 'btn btn-primary' %>
+  <%= link_to 'Back to Chefs', chefs_path, class: 'btn btn-primary text-white' %>
 </div>
