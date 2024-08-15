@@ -26,6 +26,15 @@ class BookingsController < ApplicationController
     @chef = @booking.chef
   end
 
+  def edit
+    @booking = Booking.find(params[:id])
+
+    if params[:status].present?
+      @booking.update(status: params[:status])
+      redirect_to pendings_path, notice: "Booking #{params[:status].downcase}."
+    end
+  end
+
   private
 
   def booking_params
