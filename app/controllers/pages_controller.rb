@@ -3,4 +3,9 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def dashboard
+    # @chef_status = Chef.find(current_user.id).exists?
+  end
+
 end
