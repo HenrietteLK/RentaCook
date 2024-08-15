@@ -1,0 +1,28 @@
+#img-chef-new {
+  height: 70vh;
+  width: 25vw;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+#title-chef-new {
+  justify-content: center;
+}
+
+.price-per-day,
+.availability {
+  width: 45%;
+}
+
+.price-per-day span {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.specialties {
+  max-height: 35vh;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
