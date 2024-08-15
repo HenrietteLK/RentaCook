@@ -35,10 +35,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_15_131626) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "price_per_day"
     t.float "latitude"
     t.float "longitude"
     t.string "address"
+    t.float "price_per_day"
     t.text "description"
     t.index ["user_id"], name: "index_chefs_on_user_id"
   end

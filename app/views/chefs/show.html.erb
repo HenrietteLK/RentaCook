@@ -18,12 +18,10 @@
         <% end %>
 
         <div class="col-md-8">
-          <p><strong>Email:</strong> <%= @chef.user.email %></p>
-          <p><strong>Phone Number:</strong> <%= @chef.user.phone_number %></p>
-          <p><strong>Address:</strong> <%= @chef.user.address %></p>
           <p><strong>Specialties:</strong> <%= @chef.specialties %></p>
           <p><strong>Availability:</strong> <%= @chef.availability %></p>
           <p><strong>Price:</strong> <%= @chef.price_per_day %> € / day</p>
+          <p><strong>Description:</strong> "<%= @chef.description %>"</p>
         </div>
       </div>
     </div>

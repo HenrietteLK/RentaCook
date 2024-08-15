@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.chef = Chef.find(params[:chef_id])
-    @booking.total_price = 20
+    @booking.total_price = 0
     # @booking.specialty = current_user
     # faire le calcul pour le price une fois la demo terminee
     if @booking.save
@@ -33,6 +33,10 @@ class BookingsController < ApplicationController
       @booking.update(status: params[:status])
       redirect_to pendings_path, notice: "Booking #{params[:status].downcase}."
     end
+    
+  def dashboard
+    # Assuming current_user is defined and associated with bookings
+    @user_bookings = current_user.bookings # Fetch bookings associated with the current user
   end
 
   private
