@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+
     @last_booking = current_user.bookings.last
   end
 
