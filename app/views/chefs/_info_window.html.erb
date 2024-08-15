@@ -1,1 +1,9 @@
-<%= chef.user.first_name %>
+<div>
+  <%= link_to chef_path(chef), class:"infowindows"  do %>
+    <p> Hello, I am <%= chef.user.first_name %></p>
+    <p> Specialities :
+    <%= JSON.parse(chef.specialties).join(', ') %>
+    </p>
+    <p> Price: <%= chef.price_per_day %>€ / day </p>
+  <%end %>
+</div>
