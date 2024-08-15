@@ -9,14 +9,18 @@
       <div class="d-flex flex-row justify-content-between m-2" style="height: 100%">
         <div class="bg-success mx-2" style="height: 65%; width: 50%; border-radius: 20px">
           <h2 class="pt-4 px-4">Last Reservation:</h2>
-          <div class="col-11 bg-primary mx-4" style="height: 275px; border-radius: 20px">
-            <p><%= @last_booking.start_date %></p>
-            <p><%= @last_booking.end_date %></p>
-            <p><%= @last_booking.status %></p>
-          </div>
-          <div class="d-flex justify-content-end">
-            <a class="btn btn-primary mt-2 mx-4" style="width: 30%; border-radius: 20px" href="#"> See Full History </a>
-          </div>
+            <div class="col-11 bg-primary mx-4" style="height: 275px; border-radius: 20px">
+              <% unless @last_booking == nil %>
+                <p><%= @last_booking.start_date %></p>
+                <p><%= @last_booking.end_date %></p>
+                <p><%= @last_booking.status %></p>
+              <% else %>
+                <p>You have made no reservations yet.</p>
+              <% end %>
+            </div>
+            <div class="d-flex justify-content-end">
+              <a class="btn btn-primary mt-2 mx-4" style="width: 30%; border-radius: 20px" href="#"> See Full History </a>
+            </div>
         </div>
         <div class="bg-success mx-2" style="height: 65%; width: 50%; border-radius: 20px">
           <h2 class="pt-4 px-4">Next Reservation:</h2>
