@@ -14,7 +14,8 @@ user1 = User.create(
   phone_number: "06-41-82-21-85",
   email: "ugo.100hache@example.com",
   password: "password123",
-  profile_picture: "data:image/jpeg;base64,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"
+  profile_picture: "data:image/jpeg;base64,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",
+  chef_status: true
 )
 user2 = User.create(
   first_name: "Jane",
@@ -23,7 +24,8 @@ user2 = User.create(
   phone_number: "06-41-82-21-85",
   email: "jane.smith@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/2471148/pexels-photo-2471148.jpeg"
+  profile_picture: "https://images.pexels.com/photos/2471148/pexels-photo-2471148.jpeg",
+  chef_status: true
 )
 user3 = User.create(
   first_name: "Michael",
@@ -32,7 +34,8 @@ user3 = User.create(
   phone_number: "06-41-82-21-85",
   email: "michael.johnson@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user4 = User.create(
   first_name: "Emily",
@@ -41,7 +44,8 @@ user4 = User.create(
   phone_number: "06-41-82-21-85",
   email: "emily.davis@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/8993561/pexels-photo-8993561.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/8993561/pexels-photo-8993561.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user5 = User.create(
   first_name: "David",
@@ -50,7 +54,8 @@ user5 = User.create(
   phone_number: "06-41-82-21-85",
   email: "david.wilson@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/927505/pexels-photo-927505.jpeg"
+  profile_picture: "https://images.pexels.com/photos/927505/pexels-photo-927505.jpeg",
+  chef_status: true
 )
 user6 = User.create(
   first_name: "Sophia",
@@ -59,7 +64,8 @@ user6 = User.create(
   phone_number: "06-41-82-21-85",
   email: "sophia.martinez@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user7 = User.create(
   first_name: "James",
@@ -68,7 +74,8 @@ user7 = User.create(
   phone_number: "06-41-82-21-85",
   email: "james.anderson@example.com",
   password: "password123",
-  profile_picture: "https://media.istockphoto.com/id/1134227880/fr/photo/homme-bel-portant-des-lunettes-et-souriant-d%C3%A9tendu-%C3%A0-lappareil-photo.jpg?s=612x612&w=0&k=20&c=0ioSuRPd5qOqFJG1uW8Vm7atAz-v_KEYo547_1Ki1Cc="
+  profile_picture: "https://media.istockphoto.com/id/1134227880/fr/photo/homme-bel-portant-des-lunettes-et-souriant-d%C3%A9tendu-%C3%A0-lappareil-photo.jpg?s=612x612&w=0&k=20&c=0ioSuRPd5qOqFJG1uW8Vm7atAz-v_KEYo547_1Ki1Cc=",
+  chef_status: true
 )
 user8 = User.create(
   first_name: "Olivia",
@@ -77,7 +84,8 @@ user8 = User.create(
   phone_number: "06-41-82-21-85",
   email: "olivia.thomas@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/5682847/pexels-photo-5682847.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/5682847/pexels-photo-5682847.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user9 = User.create(
   first_name: "William",
@@ -86,7 +94,8 @@ user9 = User.create(
   phone_number: "06-41-82-21-85",
   email: "william.garcia@example.com",
   password: "password123",
-  profile_picture: "https://media.istockphoto.com/id/1319095687/fr/photo/homme-confiant-de-sourire-de-portrait-de-projectile-de-t%C3%AAte-regardant-lappareil-photo.jpg?s=612x612&w=0&k=20&c=Cl7N3arLPnjxh-01QTdY7uhL4oNupLrqSF6I2J83oMM="
+  profile_picture: "https://media.istockphoto.com/id/1319095687/fr/photo/homme-confiant-de-sourire-de-portrait-de-projectile-de-t%C3%AAte-regardant-lappareil-photo.jpg?s=612x612&w=0&k=20&c=Cl7N3arLPnjxh-01QTdY7uhL4oNupLrqSF6I2J83oMM=",
+  chef_status: true
 )
 user10 = User.create(
   first_name: "Mia",
@@ -95,7 +104,8 @@ user10 = User.create(
   phone_number: "06-41-82-21-85",
   email: "mia.robinson@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/8129903/pexels-photo-8129903.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/8129903/pexels-photo-8129903.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user11 = User.create(
   first_name: "Alexander",
@@ -104,7 +114,8 @@ user11 = User.create(
   phone_number: "06-41-82-21-85",
   email: "alexander.lewis@example.com",
   password: "password123",
-  profile_picture: "https://media.istockphoto.com/id/1329501064/fr/photo/portrait-dun-homme-d%C3%A2ge-moyen-souriant-%C3%A0-la-cam%C3%A9ra.jpg?s=612x612&w=0&k=20&c=DCB0mstz0VA2TEe8f_NRAzdapl8wT0RbUvukNJqaQIs="
+  profile_picture: "https://media.istockphoto.com/id/1329501064/fr/photo/portrait-dun-homme-d%C3%A2ge-moyen-souriant-%C3%A0-la-cam%C3%A9ra.jpg?s=612x612&w=0&k=20&c=DCB0mstz0VA2TEe8f_NRAzdapl8wT0RbUvukNJqaQIs=",
+  chef_status: true
 )
 user12 = User.create(
   first_name: "Charlotte",
@@ -113,7 +124,8 @@ user12 = User.create(
   phone_number: "06-41-82-21-85",
   email: "charlotte.walker@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/8420889/pexels-photo-8420889.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/8420889/pexels-photo-8420889.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user13 = User.create(
   first_name: "Daniel",
@@ -122,7 +134,8 @@ user13 = User.create(
   phone_number: "06-41-82-21-85",
   email: "daniel.hall@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/6274712/pexels-photo-6274712.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/6274712/pexels-photo-6274712.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user14 = User.create(
   first_name: "Amelia",
@@ -131,7 +144,8 @@ user14 = User.create(
   phone_number: "06-41-82-21-85",
   email: "amelia.harris@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/4946515/pexels-photo-4946515.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/4946515/pexels-photo-4946515.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user15 = User.create(
   first_name: "Benjamin",
@@ -140,7 +154,8 @@ user15 = User.create(
   phone_number: "06-41-82-21-85",
   email: "benjamin.young@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user16 = User.create(
   first_name: "Ava",
@@ -149,7 +164,8 @@ user16 = User.create(
   phone_number: "06-41-82-21-85",
   email: "ava.king@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/4420634/pexels-photo-4420634.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/4420634/pexels-photo-4420634.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user17 = User.create(
   first_name: "Joseph",
@@ -158,7 +174,8 @@ user17 = User.create(
   phone_number: "06-41-82-21-85",
   email: "joseph.wright@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/5378700/pexels-photo-5378700.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/5378700/pexels-photo-5378700.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user18 = User.create(
   first_name: "Isabella",
@@ -167,7 +184,8 @@ user18 = User.create(
   phone_number: "06-41-82-21-85",
   email: "isabella.lopez@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/5615665/pexels-photo-5615665.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/5615665/pexels-photo-5615665.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 user19 = User.create(
   first_name: "Matthew",
@@ -176,7 +194,8 @@ user19 = User.create(
   phone_number: "06-41-82-21-85",
   email: "matthew.scott@example.com",
   password: "password123",
-  profile_picture: "https://images.pexels.com/photos/4307869/pexels-photo-4307869.jpeg?auto=compress&cs=tinysrgb&w=800"
+  profile_picture: "https://images.pexels.com/photos/4307869/pexels-photo-4307869.jpeg?auto=compress&cs=tinysrgb&w=800",
+  chef_status: true
 )
 User.create(
   first_name: "Evelyn",
