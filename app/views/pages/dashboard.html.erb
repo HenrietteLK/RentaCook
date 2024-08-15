@@ -16,6 +16,7 @@
                 <p><%= @last_booking.status %></p>
               <% else %>
                 <p>You have made no reservations yet.</p>
+                <p><% current_user.chef %></p>
               <% end %>
             </div>
             <div class="d-flex justify-content-end">
