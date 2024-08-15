@@ -4,13 +4,13 @@
       <h1 class="text-success">Request Sent!</h1>
       <h3>Please wait for the chef's confirmation</h3>
     <%elsif @booking.status == "Refused"%>
-      <h1>Request refused</h1>
+      <h1 class="text-success">Request refused</h1>
       <h3>Please find another chef!</h3>
     <%elsif @booking.status == "Completed"%>
-      <h1>Completed!</h1>
+      <h1 class="text-success">Completed!</h1>
       <h3>Hope you enjoy your lunch!</h3>
     <%else%>
-      <h1>Chef booked!</h1>
+      <h1 class="text-success">Chef booked!</h1>
       <h3>Please check your phone</h3>
     <%end%>
   </div>

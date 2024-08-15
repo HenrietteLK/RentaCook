@@ -188,6 +188,16 @@ User.create(
   profile_picture: "https://images.pexels.com/photos/3444087/pexels-photo-3444087.jpeg?auto=compress&cs=tinysrgb&w=800"
 )
 
+User.create(
+  first_name: "Monsieur",
+  last_name: "Test",
+  address: "219 Sunrise Drive, Orlando, FL 32801, USA",
+  phone_number: "06-41-82-21-85",
+  email: "test@example.com",
+  password: "password123",
+  profile_picture: "https://images.pexels.com/photos/3683107/pexels-photo-3683107.jpeg"
+)
+
 p User.all
 
 chef1 = Chef.create(
@@ -195,35 +205,40 @@ chef1 = Chef.create(
   specialties: ["British Cuisine", "French Cuisine"],
   availability: "2024-09-01",
   address: user1.address,
-  price_per_day: 200
+  price_per_day: 200,
+  description: "As a pioneer in modern French cuisine, I blend traditional techniques with innovative, artistic presentations. My dishes are known for their refined flavors and meticulous attention to detail."
 )
 chef3 = Chef.create(
   user_id: user3.id,
   specialties: ["Italian Cuisine"],
   availability: "2024-09-15",
   address: user3.address,
-  price_per_day: 40
+  price_per_day: 40,
+  description: "I'm passionate about bold and vibrant Latin American flavors. My creations celebrate my rich cultural heritage, offering a fusion of contemporary and traditional elements."
 )
 chef4 = Chef.create(
   user_id: user4.id,
   specialties: ["French Cuisine", "Spanish Cuisine"],
   availability: "2024-10-01",
   address: user4.address,
-  price_per_day: 12
+  price_per_day: 12,
+  description: "I redefine Indian cuisine with innovative fusion dishes. By combining traditional spices with global ingredients, I offer a fresh and exciting take on classic Indian flavors."
 )
 chef2 = Chef.create(
   user_id: user2.id,
   specialties: ["Chinese Cuisine", "Japanese Cuisine"],
   availability: "2024-10-15",
   address: user2.address,
-  price_per_day: 50
+  price_per_day: 50,
+  description: "An expert in traditional and contemporary Japanese cooking, I’m celebrated for my precision and creativity. My sushi and kaiseki menus balance flavor, texture, and presentation."
 )
 chef5 = Chef.create(
   user_id: user5.id,
   specialties: ["Thailand Cuisine"],
   availability: "2024-10-15",
   address: user5.address,
-  price_per_day: 35
+  price_per_day: 35,
+  description: "As a pastry chef with a passion for French patisserie, I craft exquisite desserts that are as visually stunning as they are delicious, often featuring delicate flavors and intricate designs."
 )
 
 Chef.create(
@@ -231,7 +246,8 @@ Chef.create(
   specialties: ["Spanish Cuisine", "Turkish Cuisine"],
   availability: "2024-10-15",
   address: user6.address,
-  price_per_day: 20
+  price_per_day: 20,
+  description: "Known for authentic Italian cuisine, I specialize in homemade pasta and fresh seafood. My dishes are deeply rooted in Italian traditions, yet presented with a modern flair."
 )
 
 Chef.create(
@@ -239,7 +255,8 @@ Chef.create(
   specialties: ["Japanese Cuisine"],
   availability: "2024-10-15",
   address: user7.address,
-  price_per_day: 70
+  price_per_day: 70,
+  description: "Dedicated to the farm-to-table movement, I create dishes that highlight seasonal, locally-sourced ingredients. My cooking celebrates simplicity and the natural flavors of produce."
 )
 
 Chef.create(
@@ -247,7 +264,8 @@ Chef.create(
   specialties: ["British Cuisine", "Belgian Cuisine"],
   availability: "2024-10-15",
   address: user8.address,
-  price_per_day: 20
+  price_per_day: 20,
+  description: "With a love for hearty, rustic dishes, I bring the flavors of Germany to life. My cooking is characterized by rich, comforting meals that evoke the warmth of a home-cooked dish."
 )
 
 Chef.create(
@@ -255,7 +273,8 @@ Chef.create(
   specialties: ["Kurdish Cuisine", "Turkish Cuisine"],
   availability: "2024-10-15",
   address: user9.address,
-  price_per_day: 50
+  price_per_day: 50,
+  description: "I’m known for vibrant Mediterranean cuisine, emphasizing fresh ingredients and healthy eating. My dishes are a colorful blend of textures and flavors that evoke the sun-kissed Mediterranean coasts."
 )
 
 Chef.create(
@@ -263,7 +282,8 @@ Chef.create(
   specialties: ["American Cuisine", "French Cuisine", "Canadian Cuisine"],
   availability: "2024-10-15",
   address: user10.address,
-  price_per_day: 45
+  price_per_day: 45,
+  description: "A master of Spanish cuisine, I specialize in tapas and small plates. My dishes are a lively exploration of Spain’s culinary traditions, showcasing bold flavors and creative combinations."
 )
 
 Chef.create(
@@ -271,7 +291,8 @@ Chef.create(
   specialties: ["Chinese Cuisine", "Vietnamese Cuisine"],
   availability: "2024-10-15",
   address: user11.address,
-  price_per_day: 10
+  price_per_day: 10,
+  description: "I bring the rich and aromatic flavors of the Middle East to life, combining traditional spices with modern techniques. My dishes are a feast for the senses, blending old and new."
 )
 
 Chef.create(
@@ -279,7 +300,8 @@ Chef.create(
   specialties: ["Arab Cuisine", "Turkish Cuisine"],
   availability: "2024-10-15",
   address: user12.address,
-  price_per_day: 40
+  price_per_day: 40,
+  description: "As a classic French chef, I’m dedicated to haute cuisine. My cooking is marked by elegant, sophisticated dishes that pay homage to France's rich culinary history."
 )
 
 Chef.create(
@@ -287,7 +309,8 @@ Chef.create(
   specialties: ["French Cuisine", "Italian Cuisine"],
   availability: "2024-10-15",
   address: user13.address,
-  price_per_day: 150
+  price_per_day: 150,
+  description: "Specializing in wood-fired pizzas and rustic Italian cuisine, I’m celebrated for authentic, flavorful dishes. My cooking is a tribute to Italy’s culinary traditions, with a focus on simple, high-quality ingredients."
 )
 
 Chef.create(
@@ -295,7 +318,8 @@ Chef.create(
   specialties: ["Polish Cuisine", "German Cuisine"],
   availability: "2024-10-15",
   address: user14.address,
-  price_per_day: 5
+  price_per_day: 5,
+  description: "A trailblazer in vegan cuisine, I create plant-based dishes that are both innovative and delicious. My cooking challenges traditional notions of vegan food with bold flavors and creative presentations."
 )
 
 Chef.create(
@@ -303,7 +327,8 @@ Chef.create(
   specialties: ["Chinese Cuisine"],
   availability: "2024-10-15",
   address: user15.address,
-  price_per_day: 15
+  price_per_day: 15,
+  description: "Known for hearty Russian and Eastern European dishes, my cooking is a comforting journey through the flavors of my homeland, emphasizing traditional, soul-warming recipes."
 )
 
 Chef.create(
@@ -311,7 +336,8 @@ Chef.create(
   specialties: ["Korean Cuisine", "Japanese Cuisine"],
   availability: "2024-10-15",
   address: user16.address,
-  price_per_day: 80
+  price_per_day: 80,
+  description: "With a passion for Moroccan cuisine, I create dishes rich in flavor and aromatic spices. My tagines and couscous celebrate North African culinary traditions, brought to life with modern techniques."
 )
 
 Chef.create(
@@ -319,7 +345,8 @@ Chef.create(
   specialties: ["Spanish Cuisine", "Italian Cuisine"],
   availability: "2024-10-15",
   address: user17.address,
-  price_per_day: 20
+  price_per_day: 20,
+  description: "I bring a modern twist to classic American barbecue, known for my inventive approach to smoked meats and Southern dishes. My cooking is bold, flavorful, and deeply satisfying."
 )
 
 Chef.create(
@@ -327,7 +354,8 @@ Chef.create(
   specialties: ["French Cuisine", "Italian Cuisine"],
   availability: "2024-10-15",
   address: user18.address,
-  price_per_day: 50
+  price_per_day: 50,
+  description: "Renowned for my minimalist approach to French cuisine, my dishes are a study in elegance and restraint, focusing on high-quality ingredients and precise techniques to create unforgettable flavors."
 )
 
 Chef.create(
@@ -335,7 +363,8 @@ Chef.create(
   specialties: ["American Cuisine"],
   availability: "2024-10-15",
   address: user19.address,
-  price_per_day: 35
+  price_per_day: 35,
+  description: "Test hello"
 )
 
 p Chef.all
