@@ -1,0 +1,72 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Pending Bookings</h1>
+
+  <h2 class="mt-4">Pending Bookings as User</h2>
+  <% if @pending_bookings_user.any? %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Chef</th>
+          <th>Specialty</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Total Price</th>
+          <th>Message</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @pending_bookings_user.each do |booking| %>
+          <tr>
+            <td><%= booking.chef.user.first_name %> <%= booking.chef.user.last_name %></td>
+            <td><%= booking.specialty %></td>
+            <td><%= booking.start_date %></td>
+            <td><%= booking.end_date %></td>
+            <td><%= number_to_currency(booking.total_price) %></td>
+            <td><%= booking.message %></td>
+            <td><%= booking.status %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>You have no pending bookings at the moment.</p>
+  <% end %>
+
+  <h2 class="mt-4">Pending Bookings as Chef</h2>
+  <% if @pending_bookings_chef.any? %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Specialty</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Total Price</th>
+          <th>Message</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @pending_bookings_chef.each do |booking| %>
+          <tr>
+            <td><%= booking.user.first_name %> <%= booking.user.last_name %></td>
+            <td><%= booking.specialty %></td>
+            <td><%= booking.start_date %></td>
+            <td><%= booking.end_date %></td>
+            <td><%= number_to_currency(booking.total_price) %></td>
+            <td><%= booking.message %></td>
+            <td><%= booking.status %></td>
+            <td>
+              <%= link_to "Accept", edit_booking_path(booking, status: 'Accepted'), class: "btn btn-sm", id:  "button-accepted" %>
+              <%= link_to "Refuse", edit_booking_path(booking, status: 'Refused'), class: "btn btn-sm", id:"button-refused" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>There are no pending bookings for you as a chef.</p>
+  <% end %>
+</div>

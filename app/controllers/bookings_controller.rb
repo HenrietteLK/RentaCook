@@ -26,6 +26,14 @@ class BookingsController < ApplicationController
     @chef = @booking.chef
   end
 
+  def edit
+    @booking = Booking.find(params[:id])
+
+    if params[:status].present?
+      @booking.update(status: params[:status])
+      redirect_to pendings_path, notice: "Booking #{params[:status].downcase}."
+    end
+    
   def dashboard
     # Assuming current_user is defined and associated with bookings
     @user_bookings = current_user.bookings # Fetch bookings associated with the current user
