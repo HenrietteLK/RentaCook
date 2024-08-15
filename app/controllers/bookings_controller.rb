@@ -33,7 +33,8 @@ class BookingsController < ApplicationController
       @booking.update(status: params[:status])
       redirect_to pendings_path, notice: "Booking #{params[:status].downcase}."
     end
-    
+  end
+
   def dashboard
     # Assuming current_user is defined and associated with bookings
     @user_bookings = current_user.bookings # Fetch bookings associated with the current user
