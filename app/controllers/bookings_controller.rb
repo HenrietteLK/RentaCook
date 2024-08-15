@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.chef = Chef.find(params[:chef_id])
-    @booking.total_price = 20
+    @booking.total_price = 0
     # @booking.specialty = current_user
     # faire le calcul pour le price une fois la demo terminee
     if @booking.save
