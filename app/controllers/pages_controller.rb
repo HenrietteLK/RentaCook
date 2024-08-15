@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    # @chef_status = Chef.find(current_user.id).exists?
+    @last_booking = current_user.bookings.last
   end
 
 end
