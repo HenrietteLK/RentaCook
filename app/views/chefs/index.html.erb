@@ -4,32 +4,32 @@
   </div>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-5 ">
   <div class="row d-flex">
-<div style="width: 600px; height: 400px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-    <% @cheffs.each do |chef| %>
-    <div class="col-md-3 mb-4">
-      <%= link_to chef_path(chef), class: "card card-item d-flex align-item-center justify-content-between flex-column" do %>
-        <div class="profile-picture">
-          <%= image_tag(url_for(chef.user.profile_picture)) %>
-        </div>
-        <div class="chefs-texts">
-          <h4><%= chef.user.first_name %> <%= chef.user.last_name %></h4>
-          <p class="specialties">
-            <%= JSON.parse(chef.specialties).join(', ') %>
-          </p>
-          <div class="mt-auto d-flex justify-content-end">
-            <p class="price">
-            <%= chef.price_per_day.to_i %> € / day
-            </p>
-          </div>
-        </div>
-      <% end %>
+    <div class="maps" 
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+    <% @cheffs.each do |chef| %>
+      <div class="col-md-3 mb-4">
+        <%= link_to chef_path(chef), class: "card card-item d-flex  justify-content-between flex-column" do %>
+          <div class="profile-picture">
+            <%= image_tag(url_for(chef.user.profile_picture)) %>
+          </div>
+          <div class="chefs-texts">
+            <h4><%= chef.user.first_name %> <%= chef.user.last_name %></h4>
+            <p class="specialties">
+              <%= JSON.parse(chef.specialties).join(', ') %>
+            </p>
+            <div class="mt-auto d-flex justify-content-end">
+              <p class="price">
+              <%= chef.price_per_day.to_i %> € / day
+              </p>
+            </div>
+          </div>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
