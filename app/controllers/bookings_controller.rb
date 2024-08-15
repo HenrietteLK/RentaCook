@@ -17,16 +17,13 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
     @chefs = Chef.all
     @users = User.all
+    @user_bookings = current_user.bookings
   end
 
   def show
     @booking = Booking.find(params[:id])
     @chefs = Chef.all
     @chef = @booking.chef
-  end
-
-  def index
-    @user_bookings = current_user.bookings
   end
 
   private

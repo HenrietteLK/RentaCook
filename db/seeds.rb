@@ -193,35 +193,35 @@ p User.all
 chef1 = Chef.create(
   user_id: user1.id,
   specialties: ["British Cuisine", "French Cuisine"],
-  availability: "2024-09-01",
+  availability: "Only on weekdays",
   address: user1.address,
   price_per_day: 200
 )
 chef3 = Chef.create(
   user_id: user3.id,
   specialties: ["Italian Cuisine"],
-  availability: "2024-09-15",
+  availability: "Only available on Wenesdays",
   address: user3.address,
   price_per_day: 40
 )
 chef4 = Chef.create(
   user_id: user4.id,
   specialties: ["French Cuisine", "Spanish Cuisine"],
-  availability: "2024-10-01",
+  availability: "Only available in October and November",
   address: user4.address,
   price_per_day: 12
 )
 chef2 = Chef.create(
   user_id: user2.id,
   specialties: ["Chinese Cuisine", "Japanese Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only on weekdays",
   address: user2.address,
   price_per_day: 50
 )
 chef5 = Chef.create(
   user_id: user5.id,
   specialties: ["Thailand Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only available in September",
   address: user5.address,
   price_per_day: 35
 )
@@ -229,7 +229,7 @@ chef5 = Chef.create(
 Chef.create(
   user_id: user6.id,
   specialties: ["Spanish Cuisine", "Turkish Cuisine"],
-  availability: "2024-10-15",
+  availability: "Available anytime",
   address: user6.address,
   price_per_day: 20
 )
@@ -237,7 +237,7 @@ Chef.create(
 Chef.create(
   user_id: user7.id,
   specialties: ["Japanese Cuisine"],
-  availability: "2024-10-15",
+  availability: "Available in September and October",
   address: user7.address,
   price_per_day: 70
 )
@@ -245,7 +245,7 @@ Chef.create(
 Chef.create(
   user_id: user8.id,
   specialties: ["British Cuisine", "Belgian Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only on weekdays",
   address: user8.address,
   price_per_day: 20
 )
@@ -253,23 +253,23 @@ Chef.create(
 Chef.create(
   user_id: user9.id,
   specialties: ["Kurdish Cuisine", "Turkish Cuisine"],
-  availability: "2024-10-15",
+  availability: "Available in September",
   address: user9.address,
   price_per_day: 50
 )
 
 Chef.create(
   user_id: user10.id,
-  specialties: ["American Cuisine", "French Cuisine", "Canadian Cuisine"],
-  availability: "2024-10-15",
+  specialties: ["American Cuisine", "French Cuisine"],
+  availability: "Available anytime",
   address: user10.address,
   price_per_day: 45
 )
 
 Chef.create(
   user_id: user11.id,
-  specialties: ["Chinese Cuisine", "Vietnamese Cuisine"],
-  availability: "2024-10-15",
+  specialties: ["Chinese Cuisine", "Indian Cuisine"],
+  availability: "Available in September",
   address: user11.address,
   price_per_day: 10
 )
@@ -277,7 +277,7 @@ Chef.create(
 Chef.create(
   user_id: user12.id,
   specialties: ["Arab Cuisine", "Turkish Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only available on weekends",
   address: user12.address,
   price_per_day: 40
 )
@@ -285,7 +285,7 @@ Chef.create(
 Chef.create(
   user_id: user13.id,
   specialties: ["French Cuisine", "Italian Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only on weekdays",
   address: user13.address,
   price_per_day: 150
 )
@@ -293,7 +293,7 @@ Chef.create(
 Chef.create(
   user_id: user14.id,
   specialties: ["Polish Cuisine", "German Cuisine"],
-  availability: "2024-10-15",
+  availability: "Available in September",
   address: user14.address,
   price_per_day: 5
 )
@@ -301,7 +301,7 @@ Chef.create(
 Chef.create(
   user_id: user15.id,
   specialties: ["Chinese Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only available on Tuesdays and Fridays",
   address: user15.address,
   price_per_day: 15
 )
@@ -309,7 +309,7 @@ Chef.create(
 Chef.create(
   user_id: user16.id,
   specialties: ["Korean Cuisine", "Japanese Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only available on weekends",
   address: user16.address,
   price_per_day: 80
 )
@@ -317,7 +317,7 @@ Chef.create(
 Chef.create(
   user_id: user17.id,
   specialties: ["Spanish Cuisine", "Italian Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only available on Mondays",
   address: user17.address,
   price_per_day: 20
 )
@@ -325,7 +325,7 @@ Chef.create(
 Chef.create(
   user_id: user18.id,
   specialties: ["French Cuisine", "Italian Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only available on weekends",
   address: user18.address,
   price_per_day: 50
 )
@@ -333,7 +333,7 @@ Chef.create(
 Chef.create(
   user_id: user19.id,
   specialties: ["American Cuisine"],
-  availability: "2024-10-15",
+  availability: "Only available on Tuesdays and Fridays",
   address: user19.address,
   price_per_day: 35
 )
@@ -406,7 +406,7 @@ booking7 = Booking.create(
   total_price: 550,
   specialty: "French Cuisine",
   message: "Luxury dining at its finest. The truffle dishes were incredible.",
-  status: "Completed",
+  status: "Accepted",
   user_id: user3.id,
   chef_id: chef3.id
 )
@@ -416,7 +416,7 @@ booking8 = Booking.create(
   total_price: 320,
   specialty: "Japanese Cuisine",
   message: "A fresh take on classic dishes. Loved the farm-to-table concept.",
-  status: "Upcoming",
+  status: "Accepted",
   user_id: user4.id,
   chef_id: chef1.id
 )
@@ -426,7 +426,7 @@ booking9 = Booking.create(
   total_price: 450,
   specialty: "British Cuisine",
   message: "Exceptional service and fantastic food. The Beef Wellington was divine.",
-  status: "Upcoming",
+  status: "Refused",
   user_id: user4.id,
   chef_id: chef4.id
 )
