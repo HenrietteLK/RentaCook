@@ -35,8 +35,6 @@ class BookingsController < ApplicationController
   end
 
   def dashboard
-    # Assuming current_user is defined and associated with bookings
-    @user_bookings = current_user.bookings # Fetch bookings associated with the current user
   end
 
   private
@@ -44,4 +42,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :total_price, :specialty, :message, :status, :user_id, :chef_id)
   end
+  
 end
