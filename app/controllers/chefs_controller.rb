@@ -35,7 +35,7 @@ class ChefsController < ApplicationController
     @chef.user = current_user
     @chef.specialties = params[:search][:specialties]
     @chef.user.chef_status = true
-
+    @chef.user.save!
     @chef.save!
 
     redirect_to chef_path(@chef)
