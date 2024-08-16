@@ -38,6 +38,15 @@ class ChefsController < ApplicationController
     redirect_to chef_path(@chef)
   end
 
+  def edit
+    @chef = Chef.where(user_id: current_user.id)
+  end
+
+  def update
+    @chef = Chef.find(params[:id])
+    @chef.update(chef_params)
+    # raise
+  end
 
   private
 
