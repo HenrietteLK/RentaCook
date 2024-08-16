@@ -19,6 +19,7 @@ class ChefsController < ApplicationController
 
   def show
     @chef = Chef.find(params[:id])
+    @specialty = JSON.parse(@chef.specialties).join(', ')
     @booking = Booking.new
   end
 
@@ -33,6 +34,8 @@ class ChefsController < ApplicationController
     @chef = Chef.new(chef_params)
     @chef.user = current_user
     @chef.specialties = params[:search][:specialties]
+    @chef.user.chef_status = true
+
     @chef.save!
 
     redirect_to chef_path(@chef)
