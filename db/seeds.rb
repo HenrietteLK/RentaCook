@@ -260,7 +260,7 @@ chef5 = Chef.create(
   description: "As a pastry chef with a passion for French patisserie, I craft exquisite desserts that are as visually stunning as they are delicious, often featuring delicate flavors and intricate designs."
 )
 
-Chef.create(
+chef6 = Chef.create(
   user_id: user6.id,
   specialties: ["Spanish Cuisine", "Turkish Cuisine"],
   availability: "Available anytime",
@@ -269,7 +269,7 @@ Chef.create(
   description: "Known for authentic Italian cuisine, I specialize in homemade pasta and fresh seafood. My dishes are deeply rooted in Italian traditions, yet presented with a modern flair."
 )
 
-Chef.create(
+chef7 = Chef.create(
   user_id: user7.id,
   specialties: ["Japanese Cuisine"],
   availability: "Available in September and October",
@@ -278,7 +278,7 @@ Chef.create(
   description: "Dedicated to the farm-to-table movement, I create dishes that highlight seasonal, locally-sourced ingredients. My cooking celebrates simplicity and the natural flavors of produce."
 )
 
-Chef.create(
+chef8 = Chef.create(
   user_id: user8.id,
   specialties: ["British Cuisine", "Belgian Cuisine"],
   availability: "Only on weekdays",
@@ -287,7 +287,7 @@ Chef.create(
   description: "With a love for hearty, rustic dishes, I bring the flavors of Germany to life. My cooking is characterized by rich, comforting meals that evoke the warmth of a home-cooked dish."
 )
 
-Chef.create(
+chef9 = Chef.create(
   user_id: user9.id,
   specialties: ["Kurdish Cuisine", "Turkish Cuisine"],
   availability: "Available in September",
@@ -296,7 +296,7 @@ Chef.create(
   description: "I’m known for vibrant Mediterranean cuisine, emphasizing fresh ingredients and healthy eating. My dishes are a colorful blend of textures and flavors that evoke the sun-kissed Mediterranean coasts."
 )
 
-Chef.create(
+chef10 = Chef.create(
   user_id: user10.id,
   specialties: ["American Cuisine", "French Cuisine"],
   availability: "Available anytime",
@@ -305,7 +305,7 @@ Chef.create(
   description: "A master of Spanish cuisine, I specialize in tapas and small plates. My dishes are a lively exploration of Spain’s culinary traditions, showcasing bold flavors and creative combinations."
 )
 
-Chef.create(
+chef11 = Chef.create(
   user_id: user11.id,
   specialties: ["Chinese Cuisine", "Indian Cuisine"],
   availability: "Available in September",
@@ -314,7 +314,7 @@ Chef.create(
   description: "I bring the rich and aromatic flavors of the Middle East to life, combining traditional spices with modern techniques. My dishes are a feast for the senses, blending old and new."
 )
 
-Chef.create(
+chef12 = Chef.create(
   user_id: user12.id,
   specialties: ["Arab Cuisine", "Turkish Cuisine"],
   availability: "Only available on weekends",
@@ -323,7 +323,7 @@ Chef.create(
   description: "As a classic French chef, I’m dedicated to haute cuisine. My cooking is marked by elegant, sophisticated dishes that pay homage to France's rich culinary history."
 )
 
-Chef.create(
+chef13 = Chef.create(
   user_id: user13.id,
   specialties: ["French Cuisine", "Italian Cuisine"],
   availability: "Only on weekdays",
@@ -332,7 +332,7 @@ Chef.create(
   description: "Specializing in wood-fired pizzas and rustic Italian cuisine, I’m celebrated for authentic, flavorful dishes. My cooking is a tribute to Italy’s culinary traditions, with a focus on simple, high-quality ingredients."
 )
 
-Chef.create(
+chef14 = Chef.create(
   user_id: user14.id,
   specialties: ["Polish Cuisine", "German Cuisine"],
   availability: "Available in September",
@@ -341,7 +341,7 @@ Chef.create(
   description: "A trailblazer in vegan cuisine, I create plant-based dishes that are both innovative and delicious. My cooking challenges traditional notions of vegan food with bold flavors and creative presentations."
 )
 
-Chef.create(
+chef15 = Chef.create(
   user_id: user15.id,
   specialties: ["Chinese Cuisine"],
   availability: "Only available on Tuesdays and Fridays",
@@ -350,7 +350,7 @@ Chef.create(
   description: "Known for hearty Russian and Eastern European dishes, my cooking is a comforting journey through the flavors of my homeland, emphasizing traditional, soul-warming recipes."
 )
 
-Chef.create(
+chef16 = Chef.create(
   user_id: user16.id,
   specialties: ["Korean Cuisine", "Japanese Cuisine"],
   availability: "Only available on weekends",
@@ -359,7 +359,7 @@ Chef.create(
   description: "With a passion for Moroccan cuisine, I create dishes rich in flavor and aromatic spices. My tagines and couscous celebrate North African culinary traditions, brought to life with modern techniques."
 )
 
-Chef.create(
+chef17 = Chef.create(
   user_id: user17.id,
   specialties: ["Spanish Cuisine", "Italian Cuisine"],
   availability: "Only available on Mondays",
@@ -368,7 +368,7 @@ Chef.create(
   description: "I bring a modern twist to classic American barbecue, known for my inventive approach to smoked meats and Southern dishes. My cooking is bold, flavorful, and deeply satisfying."
 )
 
-Chef.create(
+chef18 = Chef.create(
   user_id: user18.id,
   specialties: ["French Cuisine", "Italian Cuisine"],
   availability: "Only available on weekends",
@@ -377,7 +377,7 @@ Chef.create(
   description: "Renowned for my minimalist approach to French cuisine, my dishes are a study in elegance and restraint, focusing on high-quality ingredients and precise techniques to create unforgettable flavors."
 )
 
-Chef.create(
+chef19 = Chef.create(
   user_id: user19.id,
   specialties: ["American Cuisine"],
   availability: "Only available on Tuesdays and Fridays",
@@ -488,6 +488,224 @@ booking10 = Booking.create(
   user_id: user5.id,
   chef_id: chef5.id
 )
+booking11 = Booking.create(
+  start_date: "2024-11-15",
+  end_date: "2024-11-17",
+  total_price: 350,
+  specialty: "French Cuisine",
+  message: "Excited to try the classic French dishes.",
+  status: "Confirmed",
+  user_id: user12.id,
+  chef_id: chef7.id
+)
+
+booking12 = Booking.create(
+  start_date: "2024-12-01",
+  end_date: "2024-12-03",
+  total_price: 280,
+  specialty: "Japanese Cuisine",
+  message: "Looking forward to a sushi feast!",
+  status: "Pending",
+  user_id: user8.id,
+  chef_id: chef14.id
+)
+
+booking13 = Booking.create(
+  start_date: "2024-12-10",
+  end_date: "2024-12-12",
+  total_price: 200,
+  specialty: "Mexican Cuisine",
+  message: "Can't wait for some authentic Mexican flavors.",
+  status: "Confirmed",
+  user_id: user19.id,
+  chef_id: chef10.id
+)
+
+booking14 = Booking.create(
+  start_date: "2024-12-20",
+  end_date: "2024-12-22",
+  total_price: 310,
+  specialty: "Mediterranean Cuisine",
+  message: "We love the healthy and fresh Mediterranean dishes.",
+  status: "Pending",
+  user_id: user17.id,
+  chef_id: chef12.id
+)
+
+booking15 = Booking.create(
+  start_date: "2025-01-05",
+  end_date: "2025-01-07",
+  total_price: 270,
+  specialty: "Indian Cuisine",
+  message: "Looking forward to some spicy and flavorful dishes.",
+  status: "Confirmed",
+  user_id: user15.id,
+  chef_id: chef9.id
+)
+
+booking16 = Booking.create(
+  start_date: "2025-01-12",
+  end_date: "2025-01-14",
+  total_price: 220,
+  specialty: "Thai Cuisine",
+  message: "Eager to try the chef's take on traditional Thai dishes.",
+  status: "Refused",
+  user_id: user9.id,
+  chef_id: chef13.id
+)
+
+booking17 = Booking.create(
+  start_date: "2025-01-20",
+  end_date: "2025-01-22",
+  total_price: 240,
+  specialty: "Spanish Cuisine",
+  message: "Excited for a tapas night!",
+  status: "Confirmed",
+  user_id: user14.id,
+  chef_id: chef8.id
+)
+
+booking18 = Booking.create(
+  start_date: "2025-01-28",
+  end_date: "2025-01-30",
+  total_price: 330,
+  specialty: "Caribbean Cuisine",
+  message: "Can't wait to taste the vibrant flavors of the Caribbean.",
+  status: "Pending",
+  user_id: user18.id,
+  chef_id: chef16.id
+)
+
+booking19 = Booking.create(
+  start_date: "2025-02-05",
+  end_date: "2025-02-07",
+  total_price: 260,
+  specialty: "Korean Cuisine",
+  message: "Looking forward to some Korean BBQ and kimchi.",
+  status: "Confirmed",
+  user_id: user6.id,
+  chef_id: chef11.id
+)
+
+booking20 = Booking.create(
+  start_date: "2025-02-12",
+  end_date: "2025-02-14",
+  total_price: 290,
+  specialty: "Greek Cuisine",
+  message: "We always enjoy the fresh and vibrant flavors of Greek dishes.",
+  status: "Pending",
+  user_id: user13.id,
+  chef_id: chef15.id
+)
+booking21 = Booking.create(
+  start_date: "2025-02-20",
+  end_date: "2025-02-22",
+  total_price: 320,
+  specialty: "Middle Eastern Cuisine",
+  message: "Excited to experience the rich flavors and spices of Middle Eastern dishes.",
+  status: "Confirmed",
+  user_id: user11.id,
+  chef_id: chef17.id
+)
+
+booking22 = Booking.create(
+  start_date: "2025-03-01",
+  end_date: "2025-03-03",
+  total_price: 350,
+  specialty: "Vegan Cuisine",
+  message: "Looking forward to a creative and delicious plant-based meal.",
+  status: "Pending",
+  user_id: user16.id,
+  chef_id: chef19.id
+)
+
+booking23 = Booking.create(
+  start_date: "2025-03-10",
+  end_date: "2025-03-12",
+  total_price: 280,
+  specialty: "Southern Comfort Food",
+  message: "Can't wait to dig into some comforting Southern classics.",
+  status: "Confirmed",
+  user_id: user7.id,
+  chef_id: chef18.id
+)
+
+booking24 = Booking.create(
+  start_date: "2025-03-20",
+  end_date: "2025-03-22",
+  total_price: 310,
+  specialty: "Seafood Feast",
+  message: "Excited for a fresh and flavorful seafood experience.",
+  status: "Refused",
+  user_id: user10.id,
+  chef_id: chef9.id
+)
+
+booking25 = Booking.create(
+  start_date: "2025-03-28",
+  end_date: "2025-03-30",
+  total_price: 340,
+  specialty: "Brazilian BBQ",
+  message: "Looking forward to a night of delicious grilled meats and Brazilian sides.",
+  status: "Pending",
+  user_id: user8.id,
+  chef_id: chef15.id
+)
+
+booking26 = Booking.create(
+  start_date: "2025-04-05",
+  end_date: "2025-04-07",
+  total_price: 290,
+  specialty: "Italian-American Cuisine",
+  message: "Anticipating a comforting meal with a twist on classic Italian dishes.",
+  status: "Confirmed",
+  user_id: user14.id,
+  chef_id: chef12.id
+)
+
+booking27 = Booking.create(
+  start_date: "2025-04-12",
+  end_date: "2025-04-14",
+  total_price: 330,
+  specialty: "Modern Fusion",
+  message: "Can't wait to see how the chef blends different cuisines into something unique.",
+  status: "Pending",
+  user_id: user19.id,
+  chef_id: chef11.id
+)
+
+booking28 = Booking.create(
+  start_date: "2025-04-20",
+  end_date: "2025-04-22",
+  total_price: 280,
+  specialty: "Rustic Italian",
+  message: "Looking forward to a cozy night of hearty, rustic Italian dishes.",
+  status: "Confirmed",
+  user_id: user9.id,
+  chef_id: chef13.id
+)
+
+booking29 = Booking.create(
+  start_date: "2025-04-28",
+  end_date: "2025-04-30",
+  total_price: 350,
+  specialty: "Thai Street Food",
+  message: "Eager to try a variety of authentic Thai street food dishes.",
+  status: "Refused",
+  user_id: user17.id,
+  chef_id: chef16.id
+)
+
+booking30 = Booking.create(
+  start_date: "2025-05-05",
+  end_date: "2025-05-07",
+  total_price: 300,
+  specialty: "Gourmet Desserts",
+  message: "Excited for a night focused on indulgent and creative desserts.",
+  status: "Confirmed",
+  user_id: user6.id,
+  chef_id: chef8.id
+)
 
 p Booking.all
 
@@ -530,7 +748,7 @@ Review.create(
   rating: 4.3,
   comment: "Great food, but the wait time was a bit long. Still a good experience.",
   user_id: user4.id,
-  chef_id: chef1.id,
+  chef_id: chef15.id,
   booking_id: booking6.id
 )
 Review.create(
@@ -560,6 +778,205 @@ Review.create(
   user_id: user5.id,
   chef_id: chef5.id,
   booking_id: booking10.id
+)
+Review.create(
+  rating: 5.0,
+  comment: "Absolutely amazing! The chef was friendly, and the meal was delicious.",
+  user_id: user2.id,
+  chef_id: chef3.id,
+  booking_id: booking11.id
+)
+
+Review.create(
+  rating: 3.8,
+  comment: "The food was good, but the portion sizes were smaller than expected.",
+  user_id: user10.id,
+  chef_id: chef5.id,
+  booking_id: booking12.id
+)
+
+Review.create(
+  rating: 4.7,
+  comment: "Loved the presentation and flavors. Will definitely book again!",
+  user_id: user15.id,
+  chef_id: chef9.id,
+  booking_id: booking13.id
+)
+
+Review.create(
+  rating: 3.5,
+  comment: "The service was okay, but I expected more for the price.",
+  user_id: user7.id,
+  chef_id: chef12.id,
+  booking_id: booking14.id
+)
+
+Review.create(
+  rating: 4.9,
+  comment: "Exceptional! Every dish was perfectly cooked and full of flavor.",
+  user_id: user12.id,
+  chef_id: chef14.id,
+  booking_id: booking15.id
+)
+
+Review.create(
+  rating: 4.2,
+  comment: "The meal was delicious, but the dessert could have been better.",
+  user_id: user4.id,
+  chef_id: chef6.id,
+  booking_id: booking16.id
+)
+
+Review.create(
+  rating: 3.0,
+  comment: "The chef was late, and the food didn't meet our expectations.",
+  user_id: user8.id,
+  chef_id: chef10.id,
+  booking_id: booking17.id
+)
+
+Review.create(
+  rating: 4.5,
+  comment: "Wonderful experience, the chef was very professional and accommodating.",
+  user_id: user13.id,
+  chef_id: chef8.id,
+  booking_id: booking18.id
+)
+
+Review.create(
+  rating: 4.1,
+  comment: "The food was tasty, but the atmosphere could have been better.",
+  user_id: user6.id,
+  chef_id: chef11.id,
+  booking_id: booking19.id
+)
+
+Review.create(
+  rating: 2.9,
+  comment: "Disappointed with the overall experience. The food was underseasoned.",
+  user_id: user17.id,
+  chef_id: chef18.id,
+  booking_id: booking20.id
+)
+
+Review.create(
+  rating: 5.0,
+  comment: "Incredible dining experience! Everything was perfect from start to finish.",
+  user_id: user1.id,
+  chef_id: chef19.id,
+  booking_id: booking21.id
+)
+
+Review.create(
+  rating: 3.7,
+  comment: "Decent food, but it took too long to get served.",
+  user_id: user5.id,
+  chef_id: chef16.id,
+  booking_id: booking22.id
+)
+
+Review.create(
+  rating: 4.8,
+  comment: "Fantastic! The chef really knew how to impress with flavors and technique.",
+  user_id: user11.id,
+  chef_id: chef7.id,
+  booking_id: booking23.id
+)
+
+Review.create(
+  rating: 3.4,
+  comment: "It was an average experience. Nothing stood out, but it wasn't bad either.",
+  user_id: user14.id,
+  chef_id: chef13.id,
+  booking_id: booking24.id
+)
+
+Review.create(
+  rating: 4.6,
+  comment: "Delicious meal and great service! We had a wonderful time.",
+  user_id: user9.id,
+  chef_id: chef17.id,
+  booking_id: booking25.id
+)
+
+Review.create(
+  rating: 4.9,
+  comment: "The French cuisine was delightful! The chef’s attention to detail made the experience unforgettable.",
+  user_id: user12.id,
+  chef_id: chef7.id,
+  booking_id: booking26.id
+)
+
+Review.create(
+  rating: 4.5,
+  comment: "The sushi was fresh and expertly prepared. We were impressed by the presentation.",
+  user_id: user8.id,
+  chef_id: chef14.id,
+  booking_id: booking27.id
+)
+
+Review.create(
+  rating: 4.0,
+  comment: "The Mexican flavors were on point, but the dessert could have been better.",
+  user_id: user19.id,
+  chef_id: chef10.id,
+  booking_id: booking28.id
+)
+
+Review.create(
+  rating: 3.8,
+  comment: "The Mediterranean dishes were tasty, but the service was a bit slow.",
+  user_id: user17.id,
+  chef_id: chef12.id,
+  booking_id: booking29.id
+)
+
+Review.create(
+  rating: 4.7,
+  comment: "The Indian spices were perfectly balanced, and the chef was very professional.",
+  user_id: user15.id,
+  chef_id: chef9.id,
+  booking_id: booking30.id
+)
+
+Review.create(
+  rating: 3.6,
+  comment: "The Thai dishes were good, but the experience was marred by a lack of communication.",
+  user_id: user9.id,
+  chef_id: chef13.id,
+  booking_id: booking16.id
+)
+
+Review.create(
+  rating: 4.2,
+  comment: "Tapas night was a success! The variety of dishes was impressive, and everything was delicious.",
+  user_id: user14.id,
+  chef_id: chef8.id,
+  booking_id: booking17.id
+)
+
+Review.create(
+  rating: 4.8,
+  comment: "The Caribbean cuisine was vibrant and flavorful. The chef truly brought the island vibes!",
+  user_id: user18.id,
+  chef_id: chef16.id,
+  booking_id: booking18.id
+)
+
+Review.create(
+  rating: 4.3,
+  comment: "The Korean BBQ was fantastic, but the side dishes were a bit underwhelming.",
+  user_id: user6.id,
+  chef_id: chef11.id,
+  booking_id: booking19.id
+)
+
+Review.create(
+  rating: 4.6,
+  comment: "Greek night was a hit! The flavors were fresh and authentic, and the chef was delightful.",
+  user_id: user13.id,
+  chef_id: chef15.id,
+  booking_id: booking20.id
 )
 
 p Review.all
