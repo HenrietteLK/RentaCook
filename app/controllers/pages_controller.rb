@@ -21,4 +21,17 @@ class PagesController < ApplicationController
     redirect_to pendings_path, notice: "Booking refused."
   end
 
+  def dashboard
+
+  def accept_booking
+    @booking = Booking.find(params[:id])
+    @booking.update(status: 'Accepted')
+    redirect_to pendings_path, notice: "Booking accepted."
+  end
+
+  def refuse_booking
+    @booking = Booking.find(params[:id])
+    @booking.update(status: 'Refused')
+    redirect_to pendings_path, notice: "Booking refused."
+  end
 end
