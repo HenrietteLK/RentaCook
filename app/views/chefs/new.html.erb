@@ -16,14 +16,14 @@
               <%= f.input :availability, label: "Set your availability", placeholder: "'Only on weekdays' or 'During the summer'" %>
             </div>
           </div>
-          <div class="specialties mb-3">
+          <div class="specialties text-success mb-3">
             <%= f.input :specialties, label: false, collection: ["French Cuisine", "Spanish Cuisine", "American Cuisine", "Italian Cuisine", "Chinese Cuisine", "Japanese Cuisine", "Korean Cuisine", "Mexican Cuisine", "Arab Cuisine", "Turkish Cuisine", "British Cuisine", "Indian Cuisine", "Thailand Cuisine", "German Cuisine"], include_blank: "Anything", wrapper_html: { class: 'form-group' }, :as => :check_boxes, :input_html => {:name => "search[specialties][]", :multiple => true}, include_hidden: false %>
           </div>
           <div class="description mb-3">
             <%= f.input :description, label: false, placeholder: "Add a description" %>
           </div>
           <div class="d-flex justify-content-center align-items-center p-3">
-            <%= f.button :submit, "Become a chef!", class: 'btn btn-primary' %>
+            <%= f.button :submit, "Become a chef!", class: 'btn btn-primary text-white' %>
           </div>
         </div>
       <% end %>

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="title-chef">
+  <div class="title-chef d-flex justify-content-center">
     <h1>Choose a chef</h1>
   </div>
 </div>
@@ -7,7 +7,7 @@
 <div class="container mt-5 ">
   <div class="row d-flex">
   <div class="col-md-6">
-    <div class="maps"
+    <div class="maps rounded-4" style="height: 95%; width: 100%"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -19,16 +19,16 @@
           <div class="profile-picture">
             <%= image_tag(url_for(chef.user.profile_picture)) %>
           </div>
-          <div class="chefs-texts">
-            <h4><%= chef.user.first_name %> <%= chef.user.last_name %></h4>
-            <p class="specialties">
-              <%= JSON.parse(chef.specialties).join(', ') %>
-            </p>
-            <div class="mt-auto d-flex justify-content-end">
-              <p class="price">
-              <%= chef.price_per_day.to_i %> € / day
+            <div class="chefs-texts">
+              <h4><%= chef.user.first_name %> <%= chef.user.last_name %></h4>
+              <p class="specialties">
+                <%= JSON.parse(chef.specialties).join(', ') %>
               </p>
-            </div>
+              <div class="mt-auto d-flex justify-content-end">
+                <p class="price">
+                <%= chef.price_per_day.to_i %> € / day
+                </p>
+              </div>
           </div>
         <% end %>
       </div>

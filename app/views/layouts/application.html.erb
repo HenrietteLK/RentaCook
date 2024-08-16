@@ -8,6 +8,9 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <%= javascript_importmap_tags %>
 
   </head>
@@ -28,7 +31,10 @@
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <% if user_signed_in? %>
                       <%= link_to "My Reservations", dashboard_path, class: "dropdown-item"%>
-                      <%= link_to "Bookings", user_bookings_path(current_user), class: "dropdown-item"%>
+                      <% if current_user.chef_status == false %>
+                        <%= link_to "Become a Chef", new_chef_path, class: "dropdown-item"%>
+                      <% end %>
+                      <%= link_to "Edit your profile", href="#", class: "dropdown-item"%>
                       <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
                     <% end %>
                   </div>
