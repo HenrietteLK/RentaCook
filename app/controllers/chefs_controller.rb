@@ -41,6 +41,18 @@ class ChefsController < ApplicationController
     redirect_to chef_path(@chef)
   end
 
+  def edit
+    id = current_user.chefs.ids.join.to_i
+    @chef = Chef.find(id)
+  end
+
+  def update
+    @chef = Chef.find(params[:id])
+
+    @chef.update(specialties: params[:search][:specialties].to_s, availability: params[:chef][:availability], price_per_day: params[:chef][:price_per_day], description: params[:chef][:description])
+
+    redirect_to chef_path
+  end
 
   private
 
