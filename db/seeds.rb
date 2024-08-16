@@ -217,6 +217,46 @@ User.create(
   profile_picture: "https://images.pexels.com/photos/3683107/pexels-photo-3683107.jpeg"
 )
 
+User.create(
+  first_name: "Lucas",
+  last_name: "Seed",
+  address: "16 Villa Gaudelet, Paris",
+  phone_number: "06-41-82-21-85",
+  email: "lucas.seed@example.com",
+  password: "password123",
+  profile_picture: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+)
+
+User.create(
+  first_name: "Joshua",
+  last_name: "Seed",
+  address: "16 Villa Gaudelet, Paris",
+  phone_number: "06-41-82-21-85",
+  email: "joshua.seed@example.com",
+  password: "password123",
+  profile_picture: "https://images.pexels.com/photos/4757976/pexels-photo-4757976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+)
+
+User.create(
+  first_name: "Albert",
+  last_name: "Seed",
+  address: "16 Villa Gaudelet, Paris",
+  phone_number: "06-41-82-21-85",
+  email: "albert.seed@example.com",
+  password: "password123",
+  profile_picture: "https://images.pexels.com/photos/3907595/pexels-photo-3907595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+)
+
+User.create(
+  first_name: "Quentin",
+  last_name: "Seed",
+  address: "16 Villa Gaudelet, Paris",
+  phone_number: "06-41-82-21-85",
+  email: "quentin.seed@example.com",
+  password: "password123",
+  profile_picture: "https://images.pexels.com/photos/2741701/pexels-photo-2741701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+)
+
 p User.all
 
 chef1 = Chef.create(
