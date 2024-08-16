@@ -22,6 +22,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+  end
 
   def accept_booking
     @booking = Booking.find(params[:id])
