@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.chef = Chef.find(params[:chef_id])
-    @booking.total_price = 0
+    @booking.total_price = @booking.chef.price_per_day * ((@booking.end_date.to_date - @booking.start_date.to_date).to_i + 1)
     # @booking.specialty = current_user
     # faire le calcul pour le price une fois la demo terminee
     if @booking.save
