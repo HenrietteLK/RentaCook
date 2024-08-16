@@ -494,7 +494,7 @@ booking11 = Booking.create(
   total_price: 350,
   specialty: "French Cuisine",
   message: "Excited to try the classic French dishes.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user12.id,
   chef_id: chef7.id
 )
@@ -516,7 +516,7 @@ booking13 = Booking.create(
   total_price: 200,
   specialty: "Mexican Cuisine",
   message: "Can't wait for some authentic Mexican flavors.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user19.id,
   chef_id: chef10.id
 )
@@ -538,7 +538,7 @@ booking15 = Booking.create(
   total_price: 270,
   specialty: "Indian Cuisine",
   message: "Looking forward to some spicy and flavorful dishes.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user15.id,
   chef_id: chef9.id
 )
@@ -560,7 +560,7 @@ booking17 = Booking.create(
   total_price: 240,
   specialty: "Spanish Cuisine",
   message: "Excited for a tapas night!",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user14.id,
   chef_id: chef8.id
 )
@@ -582,7 +582,7 @@ booking19 = Booking.create(
   total_price: 260,
   specialty: "Korean Cuisine",
   message: "Looking forward to some Korean BBQ and kimchi.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user6.id,
   chef_id: chef11.id
 )
@@ -603,7 +603,7 @@ booking21 = Booking.create(
   total_price: 320,
   specialty: "Middle Eastern Cuisine",
   message: "Excited to experience the rich flavors and spices of Middle Eastern dishes.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user11.id,
   chef_id: chef17.id
 )
@@ -625,7 +625,7 @@ booking23 = Booking.create(
   total_price: 280,
   specialty: "Southern Comfort Food",
   message: "Can't wait to dig into some comforting Southern classics.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user7.id,
   chef_id: chef18.id
 )
@@ -658,7 +658,7 @@ booking26 = Booking.create(
   total_price: 290,
   specialty: "Italian-American Cuisine",
   message: "Anticipating a comforting meal with a twist on classic Italian dishes.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user14.id,
   chef_id: chef12.id
 )
@@ -680,7 +680,7 @@ booking28 = Booking.create(
   total_price: 280,
   specialty: "Rustic Italian",
   message: "Looking forward to a cozy night of hearty, rustic Italian dishes.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user9.id,
   chef_id: chef13.id
 )
@@ -702,7 +702,7 @@ booking30 = Booking.create(
   total_price: 300,
   specialty: "Gourmet Desserts",
   message: "Excited for a night focused on indulgent and creative desserts.",
-  status: "Confirmed",
+  status: "Accepted",
   user_id: user6.id,
   chef_id: chef8.id
 )
