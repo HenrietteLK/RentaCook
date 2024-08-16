@@ -7,7 +7,9 @@ class PagesController < ApplicationController
   def pendings
     @pending_bookings_user = current_user.bookings.where(status: 'Pending')
     @pending_bookings_chef = Booking.where(chef: current_user.chefs.first, status: 'Pending')
+    @all_user_bookings = current_user.bookings
     @all_bookings_chef = Booking.where(chef: current_user.chefs.first).where.not(status: 'Pending')
+    @all_bookings_user = current_user.bookings.where.not(status: 'Pending')
   end
 
   def accept_booking
