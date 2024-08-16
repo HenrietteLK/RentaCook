@@ -6,7 +6,7 @@
       <%= image_tag "https://images.pexels.com/photos/4253312/pexels-photo-4253312.jpeg", alt: "Chef-img", id: "img-chef-new" %>
     </div>
     <div class="col-6">
-      <%= simple_form_for @chef, url: chefs_path, method: :patch do |f| %>
+      <%= simple_form_for (@chef) do |f| %>
         <div class="container d-flex flex-column">
           <div class="d-flex justify-content-between">
             <div class="price-per-day mb-3">
@@ -23,7 +23,7 @@
             <%= f.input :description, label: false, placeholder: "Add a description" %>
           </div>
           <div class="d-flex justify-content-center align-items-center p-3">
-            <%= f.button :submit, "Become a chef!", class: 'btn btn-primary' %>
+            <%= f.button :submit, "Save", class: 'btn btn-primary' %>
           </div>
         </div>
       <% end %>
